@@ -36,5 +36,10 @@
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
+		<select class="form-control">
+		{% for lv1 in lv1_list %}
+			<option>{{ lv1.label }}</option>
+		{% endfor %}
+		</select>
 	 </body>
 </html>
