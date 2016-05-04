@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import Lv1
+from .models import subject
 
-admin.site.register(Lv1)
+admin.site.register(subject)
