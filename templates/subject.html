@@ -37,28 +37,38 @@
          </div><!-- /.container-fluid -->
       </nav>
       <form id="form" action="/subject/" method="get">
-         <select name="level1" class="form-control">
-         {% for level1 in level1_list %}
-         <option value="{{level1}}">{{ level1 }}</option>
-         {% endfor %}
-         <option value="{{selected1}}" selected>{{ selected1 }}</option>
-         </select>
+         <div class="col-md-3">
+            <label>level1</label>
+            <select name="level1" class="form-control">
+            {% for level1 in level1_list %}
+            <option value="{{level1}}">{{ level1 }}</option>
+            {% endfor %}
+            <option value="{{selected1}}" selected>{{ selected1 }}</option>
+            </select>
+            <button type="submit" class="btn btn-default">Submit</button>
+         </div>
 
-         <select name="level2" class="form-control">
-         {% for level2 in level2_list %}
-         <option value="{{level2}}">{{ level2 }}</option>
-         {% endfor %}
-         <option value="{{selected2}}" selected>{{ selected2 }}</option>
-         </select>
+         <div class="col-md-3">
+            <label>level2</label>
+            <select name="level2" class="form-control">
+            {% for level2 in level2_list %}
+            <option value="{{level2}}">{{ level2 }}</option>
+            {% endfor %}
+            <option value="{{selected2}}" selected>{{ selected2 }}</option>
+            </select>
+            <button type="submit" class="btn btn-default">Submit</button>
+         </div>
 
-         <select name="level3" class="form-control">
-         {% for level3 in level3_list %}
-         <option value="{{level3}}">{{ level3 }}</option>
-         {% endfor %}
-         <option value="{{selected3}}" selected>{{ selected3 }}</option>
-         </select>
-
-         <button type="submit" class="btn btn-default">Submit</button>
+         <div class="col-md-3">
+            <label>level3</label>
+            <select name="level3" class="form-control">
+            {% for level3 in level3_list %}
+            <option value="{{level3}}">{{ level3 }}</option>
+            {% endfor %}
+            <option value="{{selected3}}" selected>{{ selected3 }}</option>
+            </select>
+            <button type="submit" class="btn btn-default">Submit</button>
+         </div>
       </form>
     </body>
 </html>
