@@ -1,6 +1,10 @@
 from django.db import models
 
-class Lv1(models.Model):
-    label = models.CharField(max_length=100)
+class subject(models.Model):
+    level1 = models.CharField(max_length=100)
+    level2 = models.CharField(max_length=100)
+    level3 = models.CharField(max_length=100)
+    question = models.CharField(max_length=100)
+    wave = models.CharField(max_length=100)
     def __str__(self):
-        return self.label
+        return self.question
