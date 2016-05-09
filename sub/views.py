@@ -106,34 +106,29 @@ subject_list = {'同儕關係': {'偏差行為': ['班級同學', '朋友', '自
 def sub(request):
     try:
         level2_list = subject_list[request.GET['level1']]
+        request.session['level1'] = request.GET['level1']
     except:
         level2_list = ''
+        request.session['level1'] = ''
 
     try:
         level3_list = subject_list[request.GET['level1']][request.GET['level2']]
+        request.session['level2'] = request.GET['level2']
     except:
         level3_list = ''
+        request.session['level2'] = ''
+
 
     try:
-        selected1 = request.GET['level1']
+        request.session['level3'] = request.GET['level3']
     except:
-        selected1 = ''
-
-    try:
-        selected2 = request.GET['level2']
-    except:
-        selected2 = ''
-
-    try:
-        selected3 = request.GET['level3']
-    except:
-        selected3 = ''
+        request.session['level3'] = ''
 
     return render_to_response('subject.html', {
         'level1_list': subject_list,
         'level2_list': level2_list,
         'level3_list': level3_list,
-        'selected1': selected1,
-        'selected2': selected2,
-        'selected3': selected3,
+        'selected1': request.session['level1'],
+        'selected2': request.session['level2'],
+        'selected3': request.session['level3'],
         })
