@@ -124,7 +124,7 @@ def sub(request):
 
     output_list = ''
     if (len(request.session['level1']) > 0 and len(request.session['level2']) >0 and len(request.session['level3']) >0):
-        output_list = subject.objects.filter(level1=request.session['level1'])
+        output_list = subject.objects.filter(level1=request.session['level1'], level2=request.session['level2'], level3=request.session['level3'])
 
     return render_to_response('subject.html', {
         'level1_list': subject_list,
