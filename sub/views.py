@@ -1,7 +1,5 @@
 from django.shortcuts import render_to_response
-# from django.http import HttpResponse
-# import pickle
-# from .models import subject
+from .models import subject
 
 subject_list = {'同儕關係': {'偏差行為': ['班級同學', '朋友', '自己本身', '家人', '校園'],
           '友誼網絡': ['班級同學', '朋友', '補習班同學'],
@@ -124,11 +122,16 @@ def sub(request):
     except:
         request.session['level3'] = ''
 
+    output_list = ''
+    if (len(request.session['level1']) > 0 and len(request.session['level2']) >0 and len(request.session['level3']) >0):
+        output_list = subject.objects.filter(level1=request.session['level1'])
+
     return render_to_response('subject.html', {
         'level1_list': subject_list,
         'level2_list': level2_list,
         'level3_list': level3_list,
         'selected1': request.session['level1'],
         'selected2': request.session['level2'],
+        'output': output_list,
         'selected3': request.session['level3'],
         })
