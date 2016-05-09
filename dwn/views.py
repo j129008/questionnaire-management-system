@@ -1,5 +1,4 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render_to_response
 
 def dwn(request):
-    return HttpResponse("Hello World!")
+    return render_to_response('download.html')
