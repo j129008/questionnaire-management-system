@@ -16,8 +16,10 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from sub.views import sub
+from dwn.views import dwn
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^subject/', sub),
+    url(r'^download/', dwn),
 ]
