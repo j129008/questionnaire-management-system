@@ -1,4 +1,12 @@
 from django.shortcuts import render_to_response
 
 def dwn(request):
-    return render_to_response('download.html')
+    try:
+        if 'clear' in request.GET:
+            request.session['saved'] = []
+            print(request.GET)
+    except:
+        pass
+    return render_to_response('download.html',{
+        'saved': request.session['saved'],
+    })
