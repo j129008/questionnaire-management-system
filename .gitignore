@@ -1,3 +1,5 @@
 db.sqlite3
 *.pyc
 sub/migrations/*.py
+*.pkl
+csv/
