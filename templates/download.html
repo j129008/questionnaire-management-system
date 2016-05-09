@@ -36,6 +36,30 @@
             </div><!-- /.navbar-collapse -->
          </div><!-- /.container-fluid -->
       </nav>
-      
+      <form id="form" action="/download/" method="get">
+         <button class="btn btn-default" name="clear" value="true">清除列表</button>
+      </form>
+      <div style="padding-left:20px;padding-top:20px">
+         <table class="table">
+            <thead>
+               <tr>
+                  <th>對象</th>
+                  <th>層次</th>
+                  <th>面向</th>
+                  <th>問題</th>
+               </tr>
+            </thead>
+            <tbody>
+               {% for line in saved %}
+                  <tr>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td>{{line}}</td>
+                  </tr>
+               {% endfor %}
+            </tbody>
+         </table>
+      </div>
    </body>
 </html>
