@@ -37,8 +37,8 @@
          </div><!-- /.container-fluid -->
       </nav>
       <form id="form" action="/subject/" method="get">
-         <div class="col-md-3">
-            <label>level1</label>
+         <div class="col-md-2">
+            <label>選擇對象</label>
             <select name="level1" class="form-control">
             {% for level1 in level1_list %}
             <option value="{{level1}}">{{ level1 }}</option>
@@ -48,8 +48,8 @@
             <button type="submit" class="btn btn-default">Submit</button>
          </div>
 
-         <div class="col-md-3">
-            <label>level2</label>
+         <div class="col-md-2">
+            <label>選擇分析層次</label>
             <select name="level2" class="form-control">
             {% for level2 in level2_list %}
             <option value="{{level2}}">{{ level2 }}</option>
@@ -59,8 +59,8 @@
             <button type="submit" class="btn btn-default">Submit</button>
          </div>
 
-         <div class="col-md-3">
-            <label>level3</label>
+         <div class="col-md-2">
+            <label>選擇面向</label>
             <select name="level3" class="form-control">
             {% for level3 in level3_list %}
             <option value="{{level3}}">{{ level3 }}</option>
