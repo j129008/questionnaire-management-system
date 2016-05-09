@@ -90,11 +90,27 @@
          </div>
 
       </form>
-      <div style="padding-left:20px">
-         {% for line in output %}
-         {{line}}
-         <br>
-         {% endfor %}
+      <div style="padding-left:20px;padding-top:20px">
+         <table class="table">
+            <thead>
+               <tr>
+                  <th>對象</th>
+                  <th>層次</th>
+                  <th>面向</th>
+                  <th>問題</th>
+               </tr>
+            </thead>
+            <tbody>
+               {% for line in output %}
+                  <tr>
+                     <td>{{selected1}}</td>
+                     <td>{{selected2}}</td>
+                     <td>{{selected3}}</td>
+                     <td>{{line}}</td>
+                  </tr>
+               {% endfor %}
+            </tbody>
+         </table>
       </div>
    </body>
 </html>
