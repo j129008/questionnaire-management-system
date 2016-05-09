@@ -127,7 +127,7 @@ def sub(request):
         output_list = [ str(ele) for ele in subject.objects.filter(level1=request.session['level1'], level2=request.session['level2'], level3=request.session['level3']) ]
 
     if not 'saved' in request.session or not request.session['saved']:
-        request.session['saved'] = []
+        request.session['saved'] = output_list
     else:
         request.session['saved'] += output_list
 
