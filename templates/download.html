@@ -36,10 +36,10 @@
             </div><!-- /.navbar-collapse -->
          </div><!-- /.container-fluid -->
       </nav>
-      <form id="form" action="/download/" method="get">
-         <button class="btn btn-default" name="clear" value="true">清除列表</button>
-      </form>
       <div style="padding-left:20px;padding-top:20px">
+         <form id="form" action="/download/" method="get">
+            <button class="btn btn-default" name="clear" value="true">清除列表</button>
+         </form>
          <table class="table">
             <thead>
                <tr>
@@ -52,10 +52,9 @@
             <tbody>
                {% for line in saved %}
                   <tr>
-                     <td></td>
-                     <td></td>
-                     <td></td>
-                     <td>{{line}}</td>
+                     {% for ele in line %}
+                        <td>{{ele}}</td>
+                     {% endfor %}
                   </tr>
                {% endfor %}
             </tbody>
