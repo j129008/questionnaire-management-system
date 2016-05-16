@@ -17,9 +17,11 @@ from django.conf.urls import url
 from django.contrib import admin
 from sub.views import sub
 from dwn.views import dwn
+from index.views import index
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^subject/', sub),
     url(r'^download/', dwn),
+    url(r'^$', index),
 ]
