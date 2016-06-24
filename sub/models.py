@@ -7,4 +7,4 @@ class subject(models.Model):
     question = models.CharField(max_length=100)
     wave = models.CharField(max_length=100)
     def __str__(self):
-        return self.question
+        return self.level1+' | '+self.level2+' | ' +self.level3+' | '+self.question
