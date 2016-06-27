@@ -101,16 +101,26 @@
                   <tr>
                      <td>{{selected2}}</td>
                      <td>{{selected3}}</td>
-                     {% for wave in waveCnt%}
-                     <div class="checkbox">
-                        <td>
-                           <label>
-                              <input type="checkbox" id="blankCheckbox" value={{selected2}},{{selected3}},{{wave}} aria-label="...">
-                           </label>
-                        </td>
-                     </div>
+                     {% for wave in line.wave %}
+                        {% if wave|length > 0 %}
+                           <div class="checkbox">
+                              <td>
+                                 <label>
+                                    <input type="checkbox" id="blankCheckbox" value={{wave}} aria-label="...">
+                                 </label>
+                              </td>
+                           </div>
+                        {%else%}
+                           <div class="checkbox">
+                              <td>
+                                 <label>
+                                    <input type="checkbox" id="blankCheckbox" value={{wave}} aria-label="..." disabled>
+                                 </label>
+                              </td>
+                           </div>
+                        {% endif %}
                      {% endfor %}
-                     <td>{{line}}</td>
+                     <td>{{line.question}}</td>
                   </tr>
                {% endfor %}
             </tbody>
