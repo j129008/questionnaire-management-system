@@ -82,5 +82,5 @@ def sub(request):
         'selected2': request.session['level2'],
         'selected3': request.session['level3'],
         'output': output_list,
-        'waveCnt': ['w1', 'w2', 'w3', 'w4', 'w5', 'w6', 'w7', 'w8', 'w9'],
+        'waveCnt': [ 'w'+str(cnt) for cnt in range(1,10)],
         })
