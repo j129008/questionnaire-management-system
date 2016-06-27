@@ -90,6 +90,9 @@
                <tr>
                   <th>分析層次</th>
                   <th>面向</th>
+                  {% for wave in waveCnt%}
+                     <th>{{wave}}</th>
+                  {% endfor %}
                   <th>問卷題項</th>
                </tr>
             </thead>
@@ -98,6 +101,15 @@
                   <tr>
                      <td>{{selected2}}</td>
                      <td>{{selected3}}</td>
+                     {% for wave in waveCnt%}
+                     <div class="checkbox">
+                        <td>
+                           <label>
+                              <input type="checkbox" id="blankCheckbox" value={{selected2}},{{selected3}},{{wave}} aria-label="...">
+                           </label>
+                        </td>
+                     </div>
+                     {% endfor %}
                      <td>{{line}}</td>
                   </tr>
                {% endfor %}
