@@ -83,48 +83,52 @@
             <br>
          </div>
 
-      </form>
-      <div style="padding-left:20px;padding-top:20px">
-         <table class="table">
-            <thead>
-               <tr>
-                  <th>分析層次</th>
-                  <th>面向</th>
-                  {% for wave in waveCnt%}
-                     <th>{{wave}}</th>
-                  {% endfor %}
-                  <th>問卷題項</th>
-               </tr>
-            </thead>
-            <tbody>
-               {% for line in output %}
+         <div style="padding-left:20px;padding-top:20px;padding-right:20px">
+            <table class="table">
+               <thead>
                   <tr>
-                     <td>{{selected2}}</td>
-                     <td>{{selected3}}</td>
-                     {% for wave in line.wave %}
-                        {% if wave|length > 0 %}
-                           <div class="checkbox">
-                              <td>
-                                 <label>
-                                    <input type="checkbox" id="blankCheckbox" value={{wave}} aria-label="...">
-                                 </label>
-                              </td>
-                           </div>
-                        {%else%}
-                           <div class="checkbox">
-                              <td>
-                                 <label>
-                                    <input type="checkbox" id="blankCheckbox" value={{wave}} aria-label="..." disabled>
-                                 </label>
-                              </td>
-                           </div>
-                        {% endif %}
+                     <th>分析層次</th>
+                     <th>面向</th>
+                     {% for wave in waveCnt%}
+                        <th>{{wave}}</th>
                      {% endfor %}
-                     <td>{{line.question}}</td>
+                     <th>問卷題項</th>
+                     <th>加入選擇清單</th>
                   </tr>
-               {% endfor %}
-            </tbody>
-         </table>
-      </div>
+               </thead>
+               <tbody>
+                  {% for line in output %}
+                     <tr>
+                        <td>{{selected2}}</td>
+                        <td>{{selected3}}</td>
+                        {% for wave in line.wave %}
+                           {% if wave|length > 0 %}
+                              <div class="checkbox">
+                                 <td>
+                                    <label>
+                                       <input type="checkbox" id="blankCheckbox" value={{wave}} aria-label="...">
+                                    </label>
+                                 </td>
+                              </div>
+                           {%else%}
+                              <div class="checkbox">
+                                 <td>
+                                    <label>
+                                       <input type="checkbox" id="blankCheckbox" value={{wave}} aria-label="..." disabled>
+                                    </label>
+                                 </td>
+                              </div>
+                           {% endif %}
+                        {% endfor %}
+                        <td style="max-width: 400px">{{line.question}}</td>
+                        <td>
+                           <button type="button" class="btn btn-default">></button>
+                        </td>
+                     </tr>
+                  {% endfor %}
+               </tbody>
+            </table>
+         </div>
+      </form>
    </body>
 </html>
