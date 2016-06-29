@@ -4,7 +4,6 @@ def dwn(request):
     try:
         if 'clear' in request.GET:
             request.session['saved'] = []
-            print(request.GET)
     except:
         pass
     return render_to_response('download.html',{
