@@ -1,4 +1,5 @@
 from django.shortcuts import render_to_response
+from sub.models import subject
 
 def dwn(request):
     try:
@@ -17,7 +18,7 @@ def dwn(request):
         except:
             tags[pk] = []
             tags[pk].append(tag)
-        data[pk] = [rec[0], rec[1], rec[2],str(tags[pk])]
+        data[pk] = [rec[0], rec[1], rec[2], subject.objects.get(pk=pk).question ,str(tags[pk])]
     for key in data:
         out.append(data[key])
 
