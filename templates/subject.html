@@ -106,7 +106,7 @@
                               <td>
                                  <label>
                                     {% if wave|length > 0 %}
-                                       <input type="checkbox" value={{wave}} aria-label="...">
+                                    <input type="checkbox" name="question" value={{line.pk}}_{{wave}} aria-label="...">
                                     {%else%}
                                        <input type="checkbox" value={{wave}} aria-label="..." disabled>
                                     {% endif %}

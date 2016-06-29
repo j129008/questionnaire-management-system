@@ -64,14 +64,20 @@ def sub(request):
 
     output_list = []
     if (len(request.session['level1']) > 0 and len(request.session['level2']) >0 and len(request.session['level3']) >0):
-        output_list = [ { 'question': str(ele.question), 'wave': ele.wave.split(',')} for ele in subject.objects.filter(level1=request.session['level1'], level2=request.session['level2'], level3=request.session['level3']) ]
+        output_list = [ { 'question': str(ele.question), 'wave': ele.wave.split(','), 'pk': ele.pk } for ele in subject.objects.filter(level1=request.session['level1'], level2=request.session['level2'], level3=request.session['level3']) ]
     if not 'saved' in request.session or not request.session['saved']:
         request.session['saved'] = []
-        for ele in output_list:
-            request.session['saved'].append([request.session['level1'], request.session['level2'], request.session['level3'], ele])
+        try:
+            for ele in request.GET.getlist('question'):
+                request.session['saved'].append([request.session['level1'], request.session['level2'], request.session['level3'], ele])
+        except:
+            pass
     else:
-        for ele in output_list:
-            request.session['saved'].append([request.session['level1'], request.session['level2'], request.session['level3'], ele])
+        try:
+            for ele in request.GET.getlist('question'):
+                request.session['saved'].append([request.session['level1'], request.session['level2'], request.session['level3'], ele])
+        except:
+            pass
 
     return render_to_response('subject.html', {
         'level1_list': subject_list,
