@@ -50,6 +50,7 @@
                   <th>面向</th>
                   <th>問題</th>
                   <th>編號</th>
+                  <th>下載</th>
                </tr>
             </thead>
             <tbody>
@@ -58,6 +59,11 @@
                      {% for ele in line %}
                         <td>{{ele}}</td>
                      {% endfor %}
+                     <td>
+                        <form id="form" action="/download/" method="get">
+                           <button class="btn btn-default" name="download" value={{line.4}}>></button>
+                        </form>
+                     </td>
                   </tr>
                {% endfor %}
             </tbody>
