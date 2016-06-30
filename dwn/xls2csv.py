@@ -2,7 +2,7 @@ from xlrd import open_workbook
 from glob import glob
 import csv
 
-fileList = glob('J1student/*')
+fileList = glob('J1student/*.xlsx')
 
 for fileName in fileList:
     print(fileName)
@@ -15,7 +15,10 @@ for fileName in fileList:
     for rrange in range(first_sheet.nrows):
         line = []
         for ele in first_sheet.row(rrange):
-            cell = ele.value
+            try:
+                cell = int(ele.value)
+            except:
+                cell = ele.value
             line.append(cell)
         out.append(line)
     out = zip(*out)
