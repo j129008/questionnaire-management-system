@@ -2,23 +2,24 @@ from django.shortcuts import render_to_response
 from sub.models import subject
 from django.http import HttpResponse
 import csv
-# import os
-# from xlrd import open_workbook
+from glob import glob
 
 def dwn(request):
     try:
         if 'clear' in request.GET:
             request.session['saved'] = []
         if 'download' in request.GET:
-            # filePath = './dwn/J1student/'
             response = HttpResponse(content_type='text/csv')
             response['Content-Disposition'] = 'attachment; filename="data.csv"'
             writer = csv.writer(response)
             for tag in request.GET['download'].split('_'):
-                # for filename in os.listdir(filePath):
-                    # book = open_workbook(filePath+filename)
-                    # first_sheet = book.sheet_by_index(0)
-                writer.writerow(["fuckyou!"])
+                for filename in glob('./dwn/J1student/*.csv'):
+                    f = open(filename, 'r')
+                    for row in csv.reader(f):
+                        if row[0] == tag:
+                            writer.writerow(row)
+                            break
+                    f.close()
                 return response
 
     except:
