@@ -21,6 +21,6 @@ for fileName in fileList:
                 cell = ele.value
             line.append(cell)
         out.append(line)
-    out = zip(*out)
+    #  out = zip(*out)
     w.writerows(out)
     f.close()
