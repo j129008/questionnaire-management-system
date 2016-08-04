@@ -1,8 +1,8 @@
 from django.shortcuts import render_to_response
 from sub.models import subject
 from django.http import HttpResponse
+import os
 import csv
-from glob import glob
 
 def dwn(request):
     try:
@@ -12,15 +12,13 @@ def dwn(request):
             response = HttpResponse(content_type='text/csv')
             response['Content-Disposition'] = 'attachment; filename="data.csv"'
             writer = csv.writer(response)
-            for tag in request.GET['download'].split('_'):
-                for filename in glob('./dwn/J1student/*.csv'):
-                    f = open(filename, 'r')
-                    for row in csv.reader(f):
-                        if row[0] == tag:
-                            writer.writerow(row)
-                            break
-                    f.close()
-                return response
+            f = open('dwn/merge.csv', 'r')
+            outList = ['id1'] + request.GET['download'].split('_')
+            writer.writerow(outList)
+            for row in csv.DictReader(f):
+                writer.writerow([ row[x] for x in outList ])
+            f.close()
+            return response
 
     except:
         pass
