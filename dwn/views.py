@@ -20,6 +20,20 @@ def dwn(request):
             f.close()
             return response
 
+        if 'downloadAll' in request.GET:
+            response = HttpResponse(content_type='text/csv')
+            response['Content-Disposition'] = 'attachment; filename="data.csv"'
+            writer = csv.writer(response)
+            f = open('dwn/merge.csv', 'r')
+            outList = [ ele[3].split("_")[1] for ele in request.session['saved'] ]
+            print(outList)
+            outList = ['id1'] + outList 
+            writer.writerow(outList)
+            for row in csv.DictReader(f):
+                writer.writerow([ row[x] for x in outList ])
+            f.close()
+            return response
+
     except:
         pass
     tags = {}
