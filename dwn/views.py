@@ -8,17 +8,10 @@ def dwn(request):
     try:
         if 'clear' in request.GET:
             request.session['saved'] = []
-        if 'download' in request.GET:
-            response = HttpResponse(content_type='text/csv')
-            response['Content-Disposition'] = 'attachment; filename="data.csv"'
-            writer = csv.writer(response)
-            f = open('dwn/merge.csv', 'r')
-            outList = ['id1'] + request.GET['download'].split('_')
-            writer.writerow(outList)
-            for row in csv.DictReader(f):
-                writer.writerow([ row[x] for x in outList ])
-            f.close()
-            return response
+        if 'delete' in request.GET:
+            delList = request.GET['delete'].split('_')
+            for delTag in delList:
+                request.session['saved'] = [ x for x in request.session['saved'] if delTag not in x[3] ]
 
         if 'downloadAll' in request.GET:
             response = HttpResponse(content_type='text/csv')
