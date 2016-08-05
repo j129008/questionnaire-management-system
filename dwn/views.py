@@ -19,11 +19,16 @@ def dwn(request):
             writer = csv.writer(response)
             f = open('dwn/merge.csv', 'r')
             outList = [ ele[3].split("_")[1] for ele in request.session['saved'] ]
-            print(outList)
             outList = ['id1'] + outList 
             writer.writerow(outList)
             for row in csv.DictReader(f):
-                writer.writerow([ row[x] for x in outList ])
+                line = []
+                for x in outList:
+                    try:
+                        line.append(row[x])
+                    except:
+                        line.append('')
+                writer.writerow(line)
             f.close()
             return response
 
