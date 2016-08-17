@@ -5,3 +5,4 @@ sub/migrations/*.py
 csv/
 *.csv
 .gitignore
+*.xlsx
