@@ -7,7 +7,7 @@ if len(sys.argv) < 2:
     print("Usage: ./xls2csv.py [folder name]")
     sys.exit()
 
-fileList = glob(sys.argv[1]+'/*.xlsx')
+fileList = glob(sys.argv[1]+'/*.xls*')
 
 for fileName in fileList:
     print(fileName)
@@ -15,7 +15,7 @@ for fileName in fileList:
     book = open_workbook(fileName)
     first_sheet = book.sheet_by_index(0)
     f = open(fileName.split('.')[0]+'.csv', 'w')
-    w = csv.writer(f)
+    w = csv.writer(f, lineterminator='\n')
 
     for rrange in range(first_sheet.nrows):
         line = []
