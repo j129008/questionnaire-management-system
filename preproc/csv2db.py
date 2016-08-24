@@ -1,20 +1,35 @@
 import csv
 import re
+from pprint import pprint
 fp = open('./data.csv','r')
 
+db = dict()
 for line in csv.reader(fp):
     for i in range(len(line)):
         line[i] = re.sub(r'',' ',line[i])
         line[i] = re.sub('\s+',' ',line[i])
-    if len(line[0]) > 0:
+    if len(line[0]) > 1:
         col1 = line[0]
-    if len(line[1]) > 0:
+    if len(line[1]) > 1:
         col2 = line[1]
-    if len(line[2]) > 0:
+    if len(line[2]) > 1:
         col3 = line[2]
-    if len(line[3]) > 0:
+    if len(line[3]) > 1:
         col4 = line[3]
 
-    if len(col4)>0 and len(col3)>0:
-        print(col1+'|'+col2+'|'+col3+'|'+col4)
-        #  db.append([col1,col2,col3,col4])
+    if len(col4)>1 and len(col3)>1:
+        if col1 not in db:
+            db[col1] = dict()
+        if col2 not in db[col1]:
+            db[col1][col2] = dict()
+        if col3 not in db[col1][col2]:
+            db[col1][col2][col3] = list()
+        if col4[0] == ' ':
+            try:
+                db[col1][col2][col3][-1].append([col4.strip(), line[4:]])
+            except:
+                db[col1][col2][col3].append([[col4.strip(), line[4:]]])
+        else:
+            db[col1][col2][col3].append([[col4.strip(), line[4:]]])
+pprint(db)
+
