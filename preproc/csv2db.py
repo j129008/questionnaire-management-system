@@ -1,6 +1,8 @@
 import csv
 import re
 from pprint import pprint
+import pickle
+
 fp = open('./data.csv','r')
 
 db = dict()
@@ -31,5 +33,6 @@ for line in csv.reader(fp):
                 db[col1][col2][col3].append([[col4.strip(), line[4:]]])
         else:
             db[col1][col2][col3].append([[col4.strip(), line[4:]]])
-pprint(db)
 
+
+pickle.dump(db, open("./db.pkl", 'wb'))
