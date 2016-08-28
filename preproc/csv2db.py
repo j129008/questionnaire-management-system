@@ -35,4 +35,16 @@ for line in csv.reader(fp):
             db[col1][col2][col3].append([[col4.strip(), line[4:]]])
 
 
-pickle.dump(db, open("./db.pkl", 'wb'))
+#  pickle.dump(db, open("./db.pkl", 'wb'))
+
+db2 = []
+for v1 in db:
+    for v2 in db[v1]:
+        for v3 in db[v1][v2]:
+            for ins in db[v1][v2][v3]:
+                db2.append(ins[0])
+                if len(ins) > 1:
+                    for ele in ins[1:]:
+                        ele.append(ins[0][0])
+                        db2.append(ele)
+pickle.dump(db2, open("./db.pkl", 'wb'))
