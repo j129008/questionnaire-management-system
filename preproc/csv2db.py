@@ -37,14 +37,28 @@ for line in csv.reader(fp):
 
 #  pickle.dump(db, open("./db.pkl", 'wb'))
 
-db2 = []
+db2 = dict()
 for v1 in db:
     for v2 in db[v1]:
         for v3 in db[v1][v2]:
             for ins in db[v1][v2][v3]:
-                db2.append(ins[0])
+                save = dict()
+                save['v1'] = v1
+                save['v2'] = v2
+                save['v3'] = v3
+                save['question'] = ins[0][0]
+                save['wave'] = ins[0][1]
+                db2[ins[0][0]] = save
                 if len(ins) > 1:
                     for ele in ins[1:]:
-                        ele.append(ins[0][0])
-                        db2.append(ele)
+                        save['v1'] = v1
+                        save['v2'] = v2
+                        save['v3'] = v3
+                        save['question'] = ele[0]
+                        save['wave'] = ele[1]
+                        save['question_top'] = ins[0][0]
+                        db2[ins[0][0] + ele[0]] = save
+db3 = []
+for key in db2:
+    db3.append(db2[key])
 pickle.dump(db2, open("./db.pkl", 'wb'))
