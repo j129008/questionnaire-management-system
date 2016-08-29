@@ -98,7 +98,11 @@
                </thead>
                <tbody>
                   {% for line in output %}
+                  {% if line.question_top|length > 0 %}
+                     <tr style="border: 3px solid powderblue">
+                     {%else%}
                      <tr>
+                     {% endif %}
                         <td>{{selected2}}</td>
                         <td>{{selected3}}</td>
                         {% for wave in line.wave %}
