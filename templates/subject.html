@@ -98,10 +98,13 @@
                </thead>
                <tbody>
                   {% for line in output %}
-                  {% if line.question_top|length > 0 %}
-                     <tr style="border: 3px solid powderblue">
+                     {% if line.question_top|length > 0 %}
+                        <tr style="border: 3px solid powderblue">
+                        {% if line.question_top == line.question %}
+                           <tr style="border: 7px solid powderblue;">
+                        {% endif %}
                      {%else%}
-                     <tr>
+                        <tr>
                      {% endif %}
                         <td>{{selected2}}</td>
                         <td>{{selected3}}</td>
