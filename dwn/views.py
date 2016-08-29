@@ -45,7 +45,7 @@ def dwn(request):
         except:
             tags[pk] = []
             tags[pk].append(tag)
-        data[pk] = [rec[0], rec[1], rec[2], subject.objects.get(pk=pk).question ,"_".join(tags[pk])]
+        data[pk] = [rec[0], rec[1], rec[2], subject.objects.get(pk=pk).question_top+' '+subject.objects.get(pk=pk).question ,"_".join(tags[pk])]
     for key in data:
         out.append(data[key])
 
