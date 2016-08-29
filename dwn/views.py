@@ -19,7 +19,7 @@ def dwn(request):
             writer = csv.writer(response)
             f = open('dwn/merge.csv', 'r')
             outList = [ ele[3].split("_")[1] for ele in request.session['saved'] ]
-            outList = ['id1'] + outList 
+            outList = ['id2'] + outList 
             writer.writerow(outList)
             for row in csv.DictReader(f):
                 line = []
@@ -45,7 +45,12 @@ def dwn(request):
         except:
             tags[pk] = []
             tags[pk].append(tag)
-        data[pk] = [rec[0], rec[1], rec[2], subject.objects.get(pk=pk).question_top+' '+subject.objects.get(pk=pk).question ,"_".join(tags[pk])]
+        ques = subject.objects.get(pk=pk).question
+        ques_top = subject.objects.get(pk=pk).question_top
+        if ques != ques_top: 
+            data[pk] = [rec[0], rec[1], rec[2], ques_top+' - '+ques ,"_".join(tags[pk])]
+        else:
+            data[pk] = [rec[0], rec[1], rec[2], ques,"_".join(tags[pk])]
     for key in data:
         out.append(data[key])
 
