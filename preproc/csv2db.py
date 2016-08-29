@@ -46,15 +46,16 @@ for v1 in db:
                 save['v1'] = v1
                 save['v2'] = v2
                 save['v3'] = v3
-                save['question'] = ins[0][0]
-                save['wave'] = ins[0][1]
-                db2[ins[0][0]] = save.copy()
-                for ele in ins[1:]:
-                    save['question'] = ele[0]
-                    save['wave'] = ele[1]
-                    save['question_top'] = ins[0][0]
-                    db2[ins[0][0] + ele[0]] = save.copy()
-
+                if len(ins) > 1:
+                    for ele in ins:
+                        save['question'] = ele[0]
+                        save['wave'] = ele[1]
+                        save['question_top'] = ins[0][0]
+                        db2[ins[0][0] + ele[0]] = save.copy()
+                else:
+                    save['question'] = ins[0][0]
+                    save['wave'] = ins[0][1]
+                    db2[ins[0][0]] = save.copy()
 
 db3 = []
 for key in db2:
