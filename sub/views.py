@@ -1,7 +1,7 @@
 from django.shortcuts import render_to_response
 from .models import subject
 
-subject_list = {'J1學生': {'代間關係': {'家事參與', '隔代關係', '親子互動', '教養行為', '親子溝通', '因升學的家庭改變', '學生獨立性'},
+subject_list = {'學生': {'代間關係': {'家事參與', '隔代關係', '親子互動', '教養行為', '親子溝通', '因升學的家庭改變', '學生獨立性'},
         '個人心理問題': {'憂鬱量表'},
         '個人行為問題': {'偏差行為', '暴力及攻擊行為', '藥物濫用'},
         '升學經驗': {'升學期望', '升學壓力', '就學現況', '升學落點', '升學方式'},
@@ -64,7 +64,8 @@ def sub(request):
 
     output_list = []
     if (len(request.session['level1']) > 0 and len(request.session['level2']) >0 and len(request.session['level3']) >0):
-        output_list = [ { 'question': str(ele.question), 'wave': ele.wave.split(','), 'pk': ele.pk } for ele in subject.objects.filter(level1=request.session['level1'], level2=request.session['level2'], level3=request.session['level3']) ]
+        pool = [ { 'question': str(ele.question), 'question_top': str(ele.question_top), 'wave': ele.wave.split(','), 'pk': ele.pk } for ele in subject.objects.filter(level1=request.session['level1'], level2=request.session['level2'], level3=request.session['level3']) ]
+        output_list = sorted( pool, key= lambda x: str(x['question_top'])+str(x['question']))
     if not 'saved' in request.session or not request.session['saved']:
         request.session['saved'] = []
         try:
