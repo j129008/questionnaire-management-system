@@ -65,7 +65,12 @@ def sub(request):
     output_list = []
     if (len(request.session['level1']) > 0 and len(request.session['level2']) >0 and len(request.session['level3']) >0):
         pool = [ { 'question': str(ele.question), 'question_top': str(ele.question_top), 'wave': ele.wave.split(','), 'pk': ele.pk } for ele in subject.objects.filter(level1=request.session['level1'], level2=request.session['level2'], level3=request.session['level3']) ]
-        output_list = sorted( pool, key= lambda x: str(x['question_top']) )
+        for ele in pool:
+            if ele['question'] == ele['question_top']:
+                pool[pool.index(ele)]['sort'] = ele['question_top']
+            else:
+                pool[pool.index(ele)]['sort'] = ele['question_top'] + ele['question']
+        output_list = sorted( pool, key= lambda x: str(x['sort']) )
     if not 'saved' in request.session or not request.session['saved']:
         request.session['saved'] = []
         try:
