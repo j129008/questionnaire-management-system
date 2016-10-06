@@ -11,6 +11,20 @@
       <!-- Latest compiled and minified JavaScript -->
       <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+      <script>
+         $(document).ready(function(){
+            $('select').on('change', function() {
+               $('#form').submit()
+            })
+            $('.checkAll').click(function(){
+               if($(this).prop('checked')){
+                  $(this).parent().siblings().children().prop("checked", true);
+               }else{
+                  $(this).parent().siblings().children().prop("checked", false);
+               }
+            })
+         })
+      </script>
    </head>
    <body>
       <nav class="navbar navbar-default">
@@ -38,14 +52,63 @@
             </div><!-- /.navbar-collapse -->
          </div><!-- /.container-fluid -->
       </nav>
-      <div class="container-fluid text-center">
+      <div style="padding-left:20px;padding-top:20px;padding-right:20px">
          <form class="form-inline" action="/search" method="get">
             <div class="form-group">
                <input type="text" name="keyword" class="form-control">
             </div>
             <button type="submit" class="btn btn-default">Search</button>
          </form>
-         {{ result }}
+         <table class="table">
+            <thead>
+               <tr>
+                  <th>分析層次</th>
+                  <th>面向</th>
+                  {% for wave in waveCnt%}
+                     <th>{{wave}}</th>
+                  {% endfor %}
+                  <th>全選</th>
+                  <th>問卷題項</th>
+               </tr>
+            </thead>
+            <tbody>
+               {% for line in output %}
+                  {% if line.question_top|length > 0 %}
+                     <tr class="active">
+                     {% if line.question_top == line.question %}
+                        <tr class="info">
+                        <td>{{line.lv2}}</td>
+                        <td>{{line.lv3}}</td>
+                     {%else%}
+                        <td></td>
+                        <td></td>
+                     {% endif %}
+                  {%else%}
+                     <tr>
+                     <td>{{line.lv2}}</td>
+                     <td>{{line.lv3}}</td>
+                  {% endif %}
+                     <div class="checkbox">
+                        {% for wave in line.wave %}
+                           <td>
+                              {% if wave|length > 0 %}
+                                 <input type="checkbox" name="question" value={{line.pk}}_{{wave}} aria-label="...">
+                              {%else%}
+                                 <div>
+                                    <input type="checkbox" aria-label="..." disabled>
+                                 </div>
+                              {% endif %}
+                           </td>
+                        {% endfor %}
+                        <td>
+                           <input type="checkbox" class="checkAll" aria-label="...">
+                        </td>
+                     </div>
+                     <td style="max-width: 400px">{{line.question}}</td>
+                  </tr>
+               {% endfor %}
+            </tbody>
+         </table>
       </div>
    </body>
 </html>
