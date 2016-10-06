@@ -31,6 +31,8 @@ def dwn(request):
                 writer.writerow(line)
             f.close()
             return response
+        if 'saved' not in request.session:
+            request.session['saved'] = []
 
     except:
         pass
