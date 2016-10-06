@@ -25,6 +25,12 @@
             })
          })
       </script>
+      <style>
+         strong{
+            background-color: yellow;
+            font-style: bold;
+         }
+      </style>
    </head>
    <body>
       <nav class="navbar navbar-default">
@@ -104,7 +110,7 @@
                            <input type="checkbox" class="checkAll" aria-label="...">
                         </td>
                      </div>
-                     <td style="max-width: 400px">{{line.question}}</td>
+                     <td style="max-width: 400px">{{line.question|safe}}</td>
                   </tr>
                {% endfor %}
             </tbody>
