@@ -10,13 +10,15 @@ def search(request):
         request.session['saved'] = []
         try:
             for ele in request.GET.getlist('question'):
-                request.session['saved'].append(['test1', 'test2', 'test3', ele])
+                item = subject.objects.get(pk = ele.split('_')[0])
+                request.session['saved'].append([item.level1, item.level2, item.level3, ele])
         except:
             pass
     else:
         try:
             for ele in request.GET.getlist('question'):
-                request.session['saved'].append(['test1', 'test2', 'test3', ele])
+                item = subject.objects.get(pk = ele.split('_')[0])
+                request.session['saved'].append([item.level1, item.level2, item.level3, ele])
         except:
             pass
     keyword = request.GET['keyword']
