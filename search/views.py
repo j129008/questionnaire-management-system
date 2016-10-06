@@ -3,7 +3,9 @@ from sub.models import subject
 
 def search(request):
     if 'keyword' not in request.GET:
-        return render_to_response('search.html', { 'result': '' })
+        return render_to_response('search.html', {
+            'keyword' : ''
+        })
     elif request.GET['keyword'] == '':
         if not 'saved' in request.session or not request.session['saved']:
             request.session['saved'] = []
@@ -36,5 +38,6 @@ def search(request):
 
     return render_to_response('search.html', {
         'waveCnt': [ 'w'+str(cnt) for cnt in range(1,10)],
-        'output' : output_list
+        'output' : output_list,
+        'keyword' : keyword
     })
