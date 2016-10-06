@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <title>主題查詢</title>
+      <title>關鍵字查詢</title>
       <!-- Latest compiled and minified CSS -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
@@ -31,46 +31,28 @@
                <ul class="nav navbar-nav">
                   <li><a href="/">頁面介紹</a></li>
                   <li><a href="/subject/">主題查詢</a></li>
-                  <li><a href="/search/">關鍵字查詢</a></li>
+                  <li class="active"><a href="/search/">關鍵字查詢</a></li>
                   <li><a href="#">波次查詢</a></li>
-                  <li class="active"><a href="/download/">下載清單</a></li>
+                  <li><a href="/download/">下載清單</a></li>
                </ul>
             </div><!-- /.navbar-collapse -->
          </div><!-- /.container-fluid -->
       </nav>
-      <div style="padding-left:20px;padding-top:20px">
-         <form id="form" action="/download/" method="get">
-            <button class="btn btn-default" name="clear" value="true">清除列表</button>
-         </form>
-         <form action="/download/" method="get">
-            <button class="btn btn-default" name="downloadAll" value="true">下載全部</button>
-         </form>
-         <table class="table">
-            <thead>
-               <tr>
-                  <th>對象</th>
-                  <th>層次</th>
-                  <th>面向</th>
-                  <th>問題</th>
-                  <th>編號</th>
-                  <th>刪除</th>
-               </tr>
-            </thead>
-            <tbody>
-               {% for line in saved %}
-                  <tr>
-                     {% for ele in line %}
-                        <td>{{ele}}</td>
-                     {% endfor %}
-                     <td>
-                        <form id="form" action="/download/" method="get">
-                           <button class="btn btn-default" name="delete" value={{line.4}}>></button>
-                        </form>
-                     </td>
-                  </tr>
-               {% endfor %}
-            </tbody>
-         </table>
+      <div class="container-fluid text-center">
+         <h1>如何使用</h1>
+         <p>
+         在這裡，我們已經將歷年的題目依照關注議題的不同進行分類，因此你可以探索TYP歷波的資料中是否有符合你興趣的題目。
+         </p>
+         <p>
+         首先選擇大範圍的脈絡層次，再將範圍限縮到特定的面向，最後選擇波次，就會出現所有符合你所選條件的題目。
+         </p>
+         <p>
+         接著，你只需要勾選你想要的題目，加入選擇清單即可。
+         </p>
+         <h1 class="text-center">小秘訣</h1>
+         <p>
+         你必須從選擇你有興趣的分析層次開始一步步聚焦，這也意謂著在過程中，你將會看到其他相同面向的不同題目，這或許會為你帶來意料之外的社會學想像！
+         <p>
       </div>
    </body>
 </html>
