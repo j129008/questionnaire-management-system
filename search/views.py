@@ -6,21 +6,19 @@ def search(request):
         return render_to_response('search.html', {
             'keyword' : ''
         })
-    elif request.GET['keyword'] == '':
-        if not 'saved' in request.session or not request.session['saved']:
-            request.session['saved'] = []
-            try:
-                for ele in request.GET.getlist('question'):
-                    request.session['saved'].append(['test1', 'test2', 'test3', ele])
-            except:
-                pass
-        else:
-            try:
-                for ele in request.GET.getlist('question'):
-                    request.session['saved'].append(['test1', 'test2', 'test3', ele])
-            except:
-                pass
-        return render_to_response('search.html', { 'result': '' })
+    if not 'saved' in request.session or not request.session['saved']:
+        request.session['saved'] = []
+        try:
+            for ele in request.GET.getlist('question'):
+                request.session['saved'].append(['test1', 'test2', 'test3', ele])
+        except:
+            pass
+    else:
+        try:
+            for ele in request.GET.getlist('question'):
+                request.session['saved'].append(['test1', 'test2', 'test3', ele])
+        except:
+            pass
     keyword = request.GET['keyword']
     setPool = [ ele.question_top for ele in subject.objects.filter(question__contains=keyword) ]
     setPool = list(set(setPool))
