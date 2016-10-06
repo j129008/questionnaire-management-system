@@ -19,6 +19,7 @@ def search(request):
             for ele in request.GET.getlist('question'):
                 item = subject.objects.get(pk = ele.split('_')[0])
                 request.session['saved'].append([item.level1, item.level2, item.level3, ele])
+                request.session.modified = True
         except:
             pass
     keyword = request.GET['keyword']
