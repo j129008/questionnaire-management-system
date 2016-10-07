@@ -25,7 +25,10 @@ def search(request):
     keyword = request.GET['keyword']
     setPool = [ ele.question_top for ele in subject.objects.filter(question__contains=keyword) ]
     setPool = list(set(setPool))
-    setPool.remove('')
+    try:
+        setPool.remove('')
+    except:
+        pass
     pool = []
     for top in setPool:
         pool += [ { 'lv2': str(ele.level2), 'lv3': str(ele.level3), 'question': str(ele.question).replace(keyword, '<strong>'+keyword+'</strong>'), 'question_top': str(ele.question_top).replace(keyword, '<strong>'+keyword+'</strong>'), 'wave': ele.wave.split(','), 'pk': ele.pk } for ele in subject.objects.filter(question_top=top) ]
