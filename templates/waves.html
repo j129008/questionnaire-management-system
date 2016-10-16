@@ -11,6 +11,20 @@
       <!-- Latest compiled and minified JavaScript -->
       <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+      <script>
+         $(document).ready(function(){
+            $('select').on('change', function() {
+               $('#form').submit()
+            })
+            $('.checkAll').click(function(){
+               if($(this).prop('checked')){
+                  $(this).parent().siblings().children().prop("checked", true);
+               }else{
+                  $(this).parent().siblings().children().prop("checked", false);
+               }
+            })
+         })
+      </script>
    </head>
    <body>
       <nav class="navbar navbar-default">
@@ -38,21 +52,33 @@
             </div><!-- /.navbar-collapse -->
          </div><!-- /.container-fluid -->
       </nav>
-      <div class="container-fluid text-center">
-         <h1>如何使用</h1>
-         <p>
-         在這裡，我們已經將歷年的題目依照關注議題的不同進行分類，因此你可以探索TYP歷波的資料中是否有符合你興趣的題目。
-         </p>
-         <p>
-         首先選擇大範圍的脈絡層次，再將範圍限縮到特定的面向，最後選擇波次，就會出現所有符合你所選條件的題目。
-         </p>
-         <p>
-         接著，你只需要勾選你想要的題目，加入選擇清單即可。
-         </p>
-         <h1 class="text-center">小秘訣</h1>
-         <p>
-         你必須從選擇你有興趣的分析層次開始一步步聚焦，這也意謂著在過程中，你將會看到其他相同面向的不同題目，這或許會為你帶來意料之外的社會學想像！
-         <p>
-      </div>
+      <form id="form" action="/waves/" method="get">
+         <div style="padding-left:20px">
+            <div class="row">
+               <div class="col-md-2">
+                  <label>選擇對象</label>
+                  <select name="level1" class="form-control">
+                     {% for level1 in level1_list %}
+                     <option value="{{level1}}">{{ level1 }}</option>
+                     {% endfor %}
+                     <option value="{{selected1}}" selected>{{ selected1 }}</option>
+                  </select>
+               </div>
+
+               <div class="col-md-2">
+                  <label>選擇波次</label>
+                  <select name="level1" class="form-control">
+                     {% for level1 in level1_list %}
+                     <option value="{{ waves }}">{{ waves }}</option>
+                     {% endfor %}
+                     <option value="{{ selected2 }}" selected>{{ selected2 }}</option>
+                  </select>
+               </div>
+
+            </div>
+            <br>
+            <br>
+         </div>
+      </form>
    </body>
 </html>
