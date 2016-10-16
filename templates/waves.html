@@ -98,16 +98,16 @@
                         <tr class="active">
                         {% if line.question_top == line.question %}
                            <tr class="info">
-                           <td>test</td>
-                           <td>test</td>
+                           <td>{{line.lv2}}</td>
+                           <td>{{line.lv3}}</td>
                         {%else%}
                            <td></td>
                            <td></td>
                         {% endif %}
                      {%else%}
                         <tr>
-                        <td>test</td>
-                        <td>test</td>
+                        <td>{{line.lv2}}</td>
+                        <td>{{line.lv3}}</td>
                      {% endif %}
                         <div class="checkbox">
                            {% for wave in line.wave %}
