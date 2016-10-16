@@ -57,21 +57,21 @@
             <div class="row">
                <div class="col-md-2">
                   <label>選擇對象</label>
-                  <select name="level1" class="form-control">
-                     {% for level1 in level1_list %}
-                     <option value="{{level1}}">{{ level1 }}</option>
+                  <select name="target" class="form-control">
+                     {% for target in targets %}
+                     <option value="{{ target }}">{{ target }}</option>
                      {% endfor %}
-                     <option value="{{selected1}}" selected>{{ selected1 }}</option>
+                     <option value="{{ sel_target }}" selected>{{ sel_target }}</option>
                   </select>
                </div>
 
                <div class="col-md-2">
                   <label>選擇波次</label>
-                  <select name="level1" class="form-control">
-                     {% for level1 in level1_list %}
-                     <option value="{{ waves }}">{{ waves }}</option>
+                  <select name="waves" class="form-control">
+                     {% for wave in waves %}
+                     <option value="{{ wave }}">{{ wave }}</option>
                      {% endfor %}
-                     <option value="{{ selected2 }}" selected>{{ selected2 }}</option>
+                     <option value="{{ sel_wave }}" selected>{{ sel_wave }}</option>
                   </select>
                </div>
 

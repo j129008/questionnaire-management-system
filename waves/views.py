@@ -8,4 +8,18 @@ waves_list = {
 }
 
 def waves(request):
-    return render_to_response('waves.html')
+    wave_list = {}
+    if 'target' not in request.session:
+        request.session['target'] = ''
+
+    if 'target' in request.GET:
+        target = request.GET['target']
+        if len(target) > 1:
+            wave_list = waves_list[target]
+            request.session['target'] = target
+
+    return render_to_response('waves.html',{
+        'targets'    : waves_list,
+        'waves'      : wave_list,
+        'sel_target' : request.session['target']
+    })
