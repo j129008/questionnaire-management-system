@@ -9,23 +9,41 @@ waves_list = {
 }
 
 def waves(request):
-    wave_list = {}
-    if 'target' not in request.session:
-        request.session['target'] = ''
+    if not 'saved' in request.session or not request.session['saved']:
+        request.session['saved'] = []
+        try:
+            for ele in request.GET.getlist('question'):
+                item = subject.objects.get(pk = ele.split('_')[0])
+                request.session['saved'].append([item.level1, item.level2, item.level3, ele])
+        except:
+            pass
+    else:
+        try:
+            for ele in request.GET.getlist('question'):
+                item = subject.objects.get(pk = ele.split('_')[0])
+                request.session['saved'].append([item.level1, item.level2, item.level3, ele])
+                request.session.modified = True
+        except:
+            pass
 
-    if 'wave' not in request.session:
-        request.session['wave'] = ''
+    wave_list = {}
+    request.session['target'] = ''
+    request.session['wave'] = ''
 
     if 'target' in request.GET:
         target = request.GET['target']
         if len(target) > 1:
             wave_list = waves_list[target]
             request.session['target'] = target
+        else:
+            del target
 
     if 'wave' in request.GET:
         wave = request.GET['wave']
         if len(wave) > 0:
             request.session['wave'] = wave
+        else:
+            del wave
 
     output_list = []
     if 'target' and 'wave' in locals():
