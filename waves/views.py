@@ -29,7 +29,7 @@ def waves(request):
 
     output_list = []
     if 'target' and 'wave' in locals():
-        pool = [ { 'lv2': str(ele.level2), 'lv3': str(ele.level3), 'question': str(ele.question), 'question_top': str(ele.question_top), 'wave': ele.wave.split(',')[int(wave)-1], 'pk': ele.pk } for ele in subject.objects.filter(level1=target) ]
+        pool = [ { 'lv2': str(ele.level2), 'lv3': str(ele.level3), 'question': str(ele.question), 'question_top': str(ele.question_top), 'wave': ele.wave.split(',')[int(wave)-1], 'pk': ele.pk } for ele in subject.objects.filter(level1=target) if len(ele.wave.split(',')[int(wave)-1]) > 0 ]
         for ele in pool:
             if ele['question'] == ele['question_top']:
                 pool[pool.index(ele)]['sort'] = ele['question_top']
