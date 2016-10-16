@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'sub',
     'dwn',
     'search',
+    'waves',
 ]
 
 MIDDLEWARE_CLASSES = [
