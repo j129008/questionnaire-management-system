@@ -85,10 +85,7 @@
                   <tr>
                      <th>分析層次</th>
                      <th>面向</th>
-                     {% for wave in waveCnt%}
-                        <th>{{wave}}</th>
-                     {% endfor %}
-                     <th>全選</th>
+                     <th>w{{wave}}</th>
                      <th>問卷題項</th>
                   </tr>
                </thead>
@@ -110,19 +107,14 @@
                         <td>{{line.lv3}}</td>
                      {% endif %}
                         <div class="checkbox">
-                           {% for wave in line.wave %}
-                              <td>
-                                 {% if wave|length > 0 %}
-                                    <input type="checkbox" name="question" value={{line.pk}}_{{wave}} aria-label="...">
-                                 {%else%}
-                                    <div>
-                                       <input type="checkbox" aria-label="..." disabled>
-                                    </div>
-                                 {% endif %}
-                              </td>
-                           {% endfor %}
                            <td>
-                              <input type="checkbox" class="checkAll" aria-label="...">
+                              {% if line.wave|length > 0 %}
+                                 <input type="checkbox" name="question" value={{line.pk}}_{{line.wave}} aria-label="...">
+                              {%else%}
+                                 <div>
+                                    <input type="checkbox" aria-label="..." disabled>
+                                 </div>
+                              {% endif %}
                            </td>
                         </div>
                         <td style="max-width: 400px">{{line.question}}</td>

@@ -29,7 +29,7 @@ def waves(request):
 
     output_list = []
     if 'target' and 'wave' in locals():
-        pool = [ { 'lv2': str(ele.level2), 'lv3': str(ele.level3), 'question': str(ele.question), 'question_top': str(ele.question_top), 'wave': ele.wave.split(','), 'pk': ele.pk } for ele in subject.objects.filter(level1=target) ]
+        pool = [ { 'lv2': str(ele.level2), 'lv3': str(ele.level3), 'question': str(ele.question), 'question_top': str(ele.question_top), 'wave': ele.wave.split(',')[int(wave)-1], 'pk': ele.pk } for ele in subject.objects.filter(level1=target) ]
         for ele in pool:
             if ele['question'] == ele['question_top']:
                 pool[pool.index(ele)]['sort'] = ele['question_top']
@@ -40,8 +40,8 @@ def waves(request):
     return render_to_response('waves.html',{
         'targets'    : waves_list,
         'waves'      : wave_list,
+        'wave'       : request.session['wave'],
         'sel_target' : request.session['target'],
         'sel_wave'   : request.session['wave'],
-        'output': output_list,
-        'waveCnt': [ 'w'+str(cnt) for cnt in range(1,10)],
+        'output'     : output_list,
     })
