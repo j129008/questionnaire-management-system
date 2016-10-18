@@ -92,14 +92,14 @@
                <tbody>
                   {% for line in output %}
                      {% if line.question_top|length > 0 %}
-                        <tr class="active">
                         {% if line.question_top == line.question %}
                            <tr class="info">
                            <td>{{line.lv2}}</td>
                            <td>{{line.lv3}}</td>
                         {%else%}
-                           <td></td>
-                           <td></td>
+                           <tr class="active">
+                           <td>{{line.lv2}}</td>
+                           <td>{{line.lv3}}</td>
                         {% endif %}
                      {%else%}
                         <tr>
@@ -117,7 +117,11 @@
                               {% endif %}
                            </td>
                         </div>
-                        <td style="max-width: 400px">{{line.question}}</td>
+                        {% if line.question_top == line.question %}
+                           <td style="max-width: 400px">{{line.question}}</td>
+                        {%else%}
+                           <td style="max-width: 400px">{{line.question_top}}{{line.question}}</td>
+                        {% endif %}
                      </tr>
                   {% endfor %}
                </tbody>
