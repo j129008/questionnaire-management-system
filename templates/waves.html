@@ -16,12 +16,12 @@
             $('select').on('change', function() {
                $('#form').submit()
             })
-            $('.checkAll').click(function(){
-               if($(this).prop('checked')){
-                  $(this).parent().siblings().children().prop("checked", true);
-               }else{
-                  $(this).parent().siblings().children().prop("checked", false);
-               }
+            $('#selAll').click(function(){
+                  if($('input').prop('checked')){
+                     $('input').prop('checked', false)
+                  }else{
+                     $('input').prop('checked', true)
+                  }
             })
          })
       </script>
@@ -75,6 +75,7 @@
                   </select>
                </div>
 
+               <button type="button" class="btn btn-default" id="selAll" style="margin-top: 25px; margin-left:15px">全選</button>
             </div>
             <br>
             <br>
