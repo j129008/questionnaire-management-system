@@ -10,14 +10,14 @@ def search(request):
         request.session['saved'] = []
         try:
             for ele in request.GET.getlist('question'):
-                item = subject.objects.get(pk = ele.split('_')[0])
+                item = subject.objects.get(pk = ele.split('-')[0])
                 request.session['saved'].append([item.level1, item.level2, item.level3, ele])
         except:
             pass
     else:
         try:
             for ele in request.GET.getlist('question'):
-                item = subject.objects.get(pk = ele.split('_')[0])
+                item = subject.objects.get(pk = ele.split('-')[0])
                 request.session['saved'].append([item.level1, item.level2, item.level3, ele])
                 request.session.modified = True
         except:

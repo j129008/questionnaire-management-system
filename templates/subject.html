@@ -123,7 +123,7 @@
                            {% for wave in line.wave %}
                               <td>
                                  {% if wave|length > 0 %}
-                                    <input type="checkbox" name="question" value={{line.pk}}_{{wave}} aria-label="...">
+                                    <input type="checkbox" name="question" value={{line.pk}}-{{wave}} aria-label="...">
                                  {%else%}
                                     <div>
                                        <input type="checkbox" aria-label="..." disabled>

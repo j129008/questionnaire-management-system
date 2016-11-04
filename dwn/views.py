@@ -19,8 +19,9 @@ def dwn(request):
             response = HttpResponse(content_type='text/csv')
             response['Content-Disposition'] = 'attachment; filename="data.csv"'
             writer = csv.writer(response)
+            response.write('\ufeff')
             f = open('dwn/merge.csv', 'r')
-            outList = [ ele[3].split("_")[1] for ele in request.session['saved'] ]
+            outList = [ ele[3].split("-")[1] for ele in request.session['saved'] ]
             outList = ['id2'] + outList
             writer.writerow(outList)
             for row in csv.DictReader(f):
@@ -36,7 +37,7 @@ def dwn(request):
         if 'downloadProg' in request.GET:
             response = HttpResponse(content_type='text/txt')
             response['Content-Disposition'] = 'attachment; filename="program.txt"'
-            outList = [ ele[3].split("_")[1] for ele in request.session['saved'] ]
+            outList = [ ele[3].split("-")[1] for ele in request.session['saved'] ]
             for keyword in outList:
                 try:
                     response.write(keyword+':\r\n')
@@ -49,14 +50,14 @@ def dwn(request):
         if 'saved' not in request.session:
             request.session['saved'] = []
 
-    except:
-        pass
+    except Exception as e:
+        print(str(e))
     tags = {}
     data = {}
     out = []
     for rec in request.session['saved']:
-        pk = rec[3].split('_')[0]
-        tag = rec[3].split('_')[1]
+        pk = rec[3].split('-')[0]
+        tag = rec[3].split('-')[1]
         try:
             tags[pk].append(tag)
         except:
@@ -73,9 +74,9 @@ def dwn(request):
                 waveList += 'w'+str(i)+' '
 
         if ques != ques_top:
-            data[pk] = [rec[0] ,waveList , rec[1] , rec[2] , ques_top+' - '+ques , "_".join(tags[pk])]
+            data[pk] = [rec[0] ,waveList , rec[1] , rec[2] , ques_top+' '+ques , ", ".join(tags[pk])]
         else:
-            data[pk] = [rec[0] ,waveList , rec[1] , rec[2] , ques                , "_".join(tags[pk])]
+            data[pk] = [rec[0] ,waveList , rec[1] , rec[2] , ques                , ", ".join(tags[pk])]
     for key in data:
         out.append(data[key])
 
