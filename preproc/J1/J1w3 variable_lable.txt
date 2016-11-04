@@ -1,0 +1,946 @@
+label define csgrade a "a.原國三" b "b.原國一"
+label value csgrade csgrade 
+label define cswave 3 "3.第三年"
+label value cswave cswave
+label define csurban 1 "1.核心都市" 2 "2.一般都市" 3 "3.新興市鎮" 4 "4.傳統產業市鎮" 5 "5.一般鄉鎮" 6 "6.高齡化鄉鎮" 7 "7.偏遠鄉鎮"
+label value csurban csurban
+label define cslocation 1 "1.台北市" 2 "2.台北縣" 3 "3.宜蘭縣市"
+label value cslocation cslocation
+label define csrespon 1 "1.學生" 2 "2.導師" 3 "3.家長"
+label value csrespon csrespon
+label define cssex 1 "1.男" 2 "2.女" 9 "9.missing"
+label value cssex cssex
+label define csbirth 99 "99.missing"
+label value csbirth csbirth
+label define csfalife 0 "0.父母離異、分居" 1 "1.存" 2 "2.歿" 9 "9.missing"
+label value csfalife csfalife
+label define csfalive 0 "0.父親已逝" 1 "1.是" 2 "2.否" 9 "9.missing"
+label value csfalive csfalive
+label define csfaedu 0 "0.不清楚、未填寫" 1 "1.國小及以下" 2 "2.國中" 3 "3.高中" 4 "4.高職" 5 "5.專科" 6 "6.大學" 7 "7.碩士" 8 "8.博士" 9 "9.missing"
+label value csfaedu csfaedu
+label define csmalife 0 "0.父母離異、分居" 1 "1.存" 2 "2.歿" 9 "9.missing"
+label value csmalife csmalife
+label define csmalive 0 "0.母親已逝" 1 "1.是" 2 "2.否" 9 "9.missing"
+label value csmalive csmalive
+label define csmaedu 0 "0.不清楚、未填寫" 1 "1.國小及以下" 2 "2.國中" 3 "3.高中" 4 "4.高職" 5 "5.專科" 6 "6.大學" 7 "7.碩士" 8 "8.博士" 9 "9.missing"
+label value csmaedu csmaedu
+label define csfaocc 0 "00.父已逝或離異" 99 "99.missing"
+label value csfaocc csfaocc
+label define csmaocc 0 "00.母已逝或離異" 99 "99.missing"
+label value csmaocc csmaocc
+label define csincome 1 "01.NT$30,000以下" 2 "02.NT$30,000-NT$49,999" 3 "03.NT$50,000-NT$59,999" 4 "04.NT$60,000-NT$69,999" 5 "05.NT$70,000-NT$79,999" 6 "06.NT$80,000-NT$89,999" 7 "07.NT$90,000-NT$99,999" 8 "08.NT$100,000-NT$109,999" 9 "09.NT$110,000-NT$119,999" 10 "10.NT$120,000-NT$129,999" 11 "11.NT$130,000-NT$139,999" 12 "12.NT$140,000-NT$149,999" 13 "13.NT$150,000以上" 99 "99.missing"
+label value csincome csincome
+label define cs101001 1 "1.從小住" 2 "2.住了__年" 9 "9.missing"
+label value cs101001 cs101001
+label define cs101002 0 "00.從小住" 99 "99.missing"
+label value cs101002 cs101002
+label define cs102000 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs102000 cs102000
+label define cs103000 0 "0.跳答" 1 "1.公寓" 2 "2.透天厝" 3 "3.電梯大樓" 4 "4.獨棟或雙併" 5 "5.三合院或四合院" 6 "6.其他" 9 "9.missing"
+label value cs103000 cs103000
+label define cs104001 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs104001 cs104001
+label define cs104002 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs104002 cs104002
+label define cs104003 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs104003 cs104003
+label define cs104004 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs104004 cs104004
+label define cs104005 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs104005 cs104005
+label define cs105000 0 "00.跳答" 99 "99.missing"
+label value cs105000 cs105000
+label define cs106000 0 "0.跳答" 1 "1.很喜歡" 2 "2.還算喜歡" 3 "3.不太喜歡" 4 "4.很不喜歡" 9 "9.missing"
+label value cs106000 cs106000
+label define cs107000 0 "0.跳答" 1 "1.很好" 2 "2.還好" 3 "3.不太好" 4 "4.很不好" 5 "5.不知道" 9 "9.missing"
+label value cs107000 cs107000
+label define cs108000 0 "0.跳答" 1 "1.0人" 2 "2.1-4人" 3 "3.5-9人" 4 "4.10-19人" 5 "5.20人以上" 9 "9.missing"
+label value cs108000 cs108000
+label define cs109000 0 "0.跳答" 1 "1.0人" 2 "2.1-4人" 3 "3.5-9人" 4 "4.10-19人" 5 "5.20人以上" 9 "9.missing"
+label value cs109000 cs109000
+label define cs110000 0 "0.跳答" 1 "1.經常" 2 "2.有時候" 3 "3.很少" 4 "4.從來沒有" 9 "9.missing"
+label value cs110000 cs110000
+label define cs111000 0 "0.跳答" 1 "1.幾乎都互相認識" 2 "2.大部分互相認識" 3 "3.大概一半一半" 4 "4.大部分互相不認識" 5 "5.幾乎都互相不認識" 9 "9.missing"
+label value cs111000 cs111000
+label define cs112000 0 "0.跳答" 1 "1.通常願意幫助別人" 2 "2.只管自己的事情" 3 "3.一半一半" 9 "9.missing"
+label value cs112000 cs112000
+label define cs113000 0 "0.跳答" 1 "1.0家" 2 "2.1-2家" 3 "3.3-4家" 4 "4.5-9家" 5 "5.10-19家" 6 "6.20家以上" 9 "9.missing"
+label value cs113000 cs113000
+label define cs114000 0 "0.跳答" 1 "1.經常" 2 "2.有時候" 3 "3.很少" 4 "4.從來沒有" 9 "9.missing"
+label value cs114000 cs114000
+label define cs115000 0 "0.跳答" "1.0人" 2 "2.1-2人" 3 "3.3-4人" 4 "4.5-9人" 5 "5.10人以上" 9 "9.missing"
+label value cs115000 cs115000
+label define cs116000 0 "0.跳答" 1 "1.經常" 2 "2.有時" 3 "3.很少" 4 "4.從未" 9 "9.missing"
+label value cs116000 cs116000
+label define cs117000 0 "0.跳答" 1 "1.經常" 2 "2.有時" 3 "3.很少" 4 "4.從未" 9 "9.missing"
+label value cs117000 cs117000
+label define cs118000 0 "0.跳答" "1.0人" 2 "2.1-4人" 3 "3.5-9人" 4 "4.10-19人" 5 "5.20人以上" 9 "9.missing"
+label value cs118000 cs118000
+label define cs119001 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs119001 cs119001
+label define cs119002 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs119002 cs119002
+label define cs119003 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs119003 cs119003
+label define cs119004 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs119004 cs119004
+label define cs119005 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs119005 cs119005
+label define cs120000 1 "1.常常有" 2 "2.有時有" 3 "3.很少有" 4 "4.沒有" 9 "9.missing"
+label value cs120000 cs120000
+label define cs121001 1 "1.很危險" 7 "7.很安全" 9 "9.missing"
+label value cs121001 cs121001
+label define cs121002 1 "1.很髒亂" 7 "7.很整潔" 9 "9.missing"
+label value cs121002 cs121002
+label define cs121003 1 "1.很不適合養小孩" 7 "7.很適合養小孩" 9 "9.missing"
+label value cs121003 cs121003
+label define cs121004 1 "1.很不方便" 7 "7.很方便" 9 "9.missing"
+label value cs121004 cs121004
+label define cs122000 1 "1.很滿意" 2 "2.還算滿意" 3 "3.不太滿意" 4 "4.很不滿意" 9 "9.missing"
+label value cs122000 cs122000
+label define cs201000 1 "1.爸爸媽媽住在一起" 2 "2.爸爸已經去世" 3 "3.媽媽已經去世" 4 "4.爸爸媽媽已經離婚" 5 "5.爸爸媽媽分居" 6 "6.爸媽已離婚但仍同居" 7 "7.其他" 9 "9.missing"
+label value cs201000 cs201000
+label define cs201a00 0 "0.不適用" 1 "1.很快樂" 2 "2.還算快樂" 3 "3.不太快樂" 4 "4.很不快樂" 9 "9.missing"
+label value cs201a00 cs201a00
+label define cs202000 1 "1.與爸媽(生父、生母)均同住" 2 "2.與爸爸、繼母同住" 3 "3.與媽媽、繼父同住" 4 "4.與爸爸同住" 5 "5.與媽媽同住" 6 "6.與其他人同住，請說明" 9 "9.missing"
+label value cs202000 cs202000
+label define cs203001 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs203001 cs203001
+label define cs203002 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs203002 cs203002
+label define cs203003 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs203003 cs203003
+label define cs203004 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs203004 cs203004
+label define cs203005 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs203005 cs203005
+label define cs203006 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs203006 cs203006
+label define cs203007 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs203007 cs203007
+label define cs203008 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs203008 cs203008
+label define cs203009 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs203009 cs203009
+label define cs203010 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs203010 cs203010
+label define cs203011 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs203011 cs203011
+label define cs203012 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs203012 cs203012
+label define cs203013 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs203013 cs203013
+label define cs203014 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs203014 cs203014
+label define cs203015 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs203015 cs203015
+label define cs204000 1 "1.好很多" 2 "2.好一些" 3 "3.差不多" 4 "4.差一些" 5 "5.差很多" 9 "9.missing"
+label value cs204000 cs204000
+label define cs205000 1 "1.有很大的幫助" 2 "2.有些幫助" 3 "3.完全沒有影響" 4 "4.有些限制" 5 "5.有很大的限制" 9 "9.missing"
+label value cs205000 cs205000
+label define cs206001 1 "1.很符合" 2 "2.還算符合" 3 "3.不太符合" 4 "4.很不符合" 9 "9.missing"
+label value cs206001 cs206001
+label define cs206002 1 "1.很符合" 2 "2.還算符合" 3 "3.不太符合" 4 "4.很不符合" 9 "9.missing"
+label value cs206002 cs206002
+label define cs206003 1 "1.很符合" 2 "2.還算符合" 3 "3.不太符合" 4 "4.很不符合" 9 "9.missing"
+label value cs206003 cs206003
+label define cs206004 1 "1.很符合" 2 "2.還算符合" 3 "3.不太符合" 4 "4.很不符合" 9 "9.missing"
+label value cs206004 cs206004
+label define cs206005 1 "1.很符合" 2 "2.還算符合" 3 "3.不太符合" 4 "4.很不符合" 9 "9.missing"
+label value cs206005 cs206005
+label define cs206006 1 "1.很符合" 2 "2.還算符合" 3 "3.不太符合" 4 "4.很不符合" 9 "9.missing"
+label value cs206006 cs206006
+label define cs207m01 0 "0.跳答" 1 "1.總是" 4 "4.一半時間" 7 "7.沒有" 9 "9.missing"
+label value cs207m01 cs207m01
+label define cs207m02 0 "0.跳答" 1 "1.總是" 4 "4.一半時間" 7 "7.沒有" 9 "9.missing"
+label value cs207m02 cs207m02
+label define cs207m03 0 "0.跳答" 1 "1.總是" 4 "4.一半時間" 7 "7.沒有" 9 "9.missing"
+label value cs207m03 cs207m03
+label define cs207m04 0 "0.跳答" 1 "1.總是" 4 "4.一半時間" 7 "7.沒有" 9 "9.missing"
+label value cs207m04 cs207m04
+label define cs207m05 0 "0.跳答" 1 "1.總是" 4 "4.一半時間" 7 "7.沒有" 9 "9.missing"
+label value cs207m05 cs207m05
+label define cs207m06 0 "0.跳答" 1 "1.總是" 4 "4.一半時間" 7 "7.沒有" 9 "9.missing"
+label value cs207m06 cs207m06
+label define cs207m07 0 "0.跳答" 1 "1.總是" 4 "4.一半時間" 7 "7.沒有" 9 "9.missing"
+label value cs207m07 cs207m07
+label define cs207m08 0 "0.跳答" 1 "1.總是" 4 "4.一半時間" 7 "7.沒有" 9 "9.missing"
+label value cs207m08 cs207m08
+label define cs207m09 0 "0.跳答" 1 "1.總是" 4 "4.一半時間" 7 "7.沒有" 9 "9.missing"
+label value cs207m09 cs207m09
+label define cs207m10 0 "0.跳答" 1 "1.總是" 4 "4.一半時間" 7 "7.沒有" 9 "9.missing"
+label value cs207m10 cs207m10
+label define cs207m11 0 "0.跳答" 1 "1.總是" 4 "4.一半時間" 7 "7.沒有" 9 "9.missing"
+label value cs207m11 cs207m11
+label define cs207m12 0 "0.跳答" 1 "1.總是" 4 "4.一半時間" 7 "7.沒有" 9 "9.missing"
+label value cs207m12 cs207m12
+label define cs207f01 0 "0.跳答" 1 "1.總是" 4 "4.一半時間" 7 "7.沒有" 9 "9.missing"
+label value cs207f01 cs207f01
+label define cs207f02 0 "0.跳答" 1 "1.總是" 4 "4.一半時間" 7 "7.沒有" 9 "9.missing"
+label value cs207f02 cs207f02
+label define cs207f03 0 "0.跳答" 1 "1.總是" 4 "4.一半時間" 7 "7.沒有" 9 "9.missing"
+label value cs207f03 cs207f03
+label define cs207f04 0 "0.跳答" 1 "1.總是" 4 "4.一半時間" 7 "7.沒有" 9 "9.missing"
+label value cs207f04 cs207f04
+label define cs207f05 0 "0.跳答" 1 "1.總是" 4 "4.一半時間" 7 "7.沒有" 9 "9.missing"
+label value cs207f05 cs207f05
+label define cs207f06 0 "0.跳答" 1 "1.總是" 4 "4.一半時間" 7 "7.沒有" 9 "9.missing"
+label value cs207f06 cs207f06
+label define cs207f07 0 "0.跳答" 1 "1.總是" 4 "4.一半時間" 7 "7.沒有" 9 "9.missing"
+label value cs207f07 cs207f07
+label define cs207f08 0 "0.跳答" 1 "1.總是" 4 "4.一半時間" 7 "7.沒有" 9 "9.missing"
+label value cs207f08 cs207f08
+label define cs207f09 0 "0.跳答" 1 "1.總是" 4 "4.一半時間" 7 "7.沒有" 9 "9.missing"
+label value cs207f09 cs207f09
+label define cs207f10 0 "0.跳答" 1 "1.總是" 4 "4.一半時間" 7 "7.沒有" 9 "9.missing"
+label value cs207f10 cs207f10
+label define cs207f11 0 "0.跳答" 1 "1.總是" 4 "4.一半時間" 7 "7.沒有" 9 "9.missing"
+label value cs207f11 cs207f11
+label define cs207f12 0 "0.跳答" 1 "1.總是" 4 "4.一半時間" 7 "7.沒有" 9 "9.missing"
+label value cs207f12 cs207f12
+label define cs208m01 0 "0.跳答" 1 "1.總是" 4 "4.一半時間" 5 "5.沒有" 9 "9.missing"
+label value cs208m01 cs208m01
+label define cs208m02 0 "0.跳答" 1 "1.總是" 4 "4.一半時間" 5 "5.沒有" 9 "9.missing"
+label value cs208m02 cs208m02
+label define cs208m03 0 "0.跳答" 1 "1.總是" 4 "4.一半時間" 5 "5.沒有" 9 "9.missing"
+label value cs208m03 cs208m03
+label define cs208m04 0 "0.跳答" 1 "1.總是" 4 "4.一半時間" 5 "5.沒有" 9 "9.missing"
+label value cs208m04 cs208m04
+label define cs208f01 0 "0.跳答" 1 "1.總是" 4 "4.一半時間" 5 "5.沒有" 9 "9.missing"
+label value cs208f01 cs208f01
+label define cs208f02 0 "0.跳答" 1 "1.總是" 4 "4.一半時間" 5 "5.沒有" 9 "9.missing"
+label value cs208f02 cs208f02
+label define cs208f03 0 "0.跳答" 1 "1.總是" 4 "4.一半時間" 5 "5.沒有" 9 "9.missing"
+label value cs208f03 cs208f03
+label define cs208f04 0 "0.跳答" 1 "1.總是" 4 "4.一半時間" 5 "5.沒有" 9 "9.missing"
+label value cs208f04 cs208f04
+label define cs209m01 0 "0.跳答" 1 "1.有改變" 2 "2.跟以前一樣" 9 "9.missing"
+label value cs209m01 cs209m01
+label define cs209m02 0 "0.跳答" 1 "1.有改變" 2 "2.跟以前一樣" 9 "9.missing"
+label value cs209m02 cs209m02
+label define cs209m03 0 "0.跳答" 1 "1.有改變" 2 "2.跟以前一樣" 9 "9.missing"
+label value cs209m03 cs209m03
+label define cs209m04 0 "0.跳答" 1 "1.有改變" 2 "2.跟以前一樣" 9 "9.missing"
+label value cs209m04 cs209m04
+label define cs209m05 0 "0.跳答" 1 "1.有改變" 2 "2.跟以前一樣" 9 "9.missing"
+label value cs209m05 cs209m05
+label define cs209m06 0 "0.跳答" 1 "1.有改變" 2 "2.跟以前一樣" 9 "9.missing"
+label value cs209m06 cs209m06
+label define cs209m07 0 "0.跳答" 1 "1.有改變" 2 "2.跟以前一樣" 9 "9.missing"
+label value cs209m07 cs209m07
+label define cs209m08 0 "0.跳答" 1 "1.有改變" 2 "2.跟以前一樣" 9 "9.missing"
+label value cs209m08 cs209m08
+label define cs209m09 0 "0.跳答" 1 "1.有改變" 2 "2.跟以前一樣" 9 "9.missing"
+label value cs209m09 cs209m09
+label define cs209m10 0 "0.跳答" 1 "1.有改變" 2 "2.跟以前一樣" 9 "9.missing"
+label value cs209m10 cs209m10
+label define cs209m11 0 "0.跳答" 1 "1.有改變" 2 "2.跟以前一樣" 9 "9.missing"
+label value cs209m11 cs209m11
+label define cs209f01 0 "0.跳答" 1 "1.有改變" 2 "2.跟以前一樣" 9 "9.missing"
+label value cs209f01 cs209f01
+label define cs209f02 0 "0.跳答" 1 "1.有改變" 2 "2.跟以前一樣" 9 "9.missing"
+label value cs209f02 cs209f02
+label define cs209f03 0 "0.跳答" 1 "1.有改變" 2 "2.跟以前一樣" 9 "9.missing"
+label value cs209f03 cs209f03
+label define cs209f04 0 "0.跳答" 1 "1.有改變" 2 "2.跟以前一樣" 9 "9.missing"
+label value cs209f04 cs209f04
+label define cs209f05 0 "0.跳答" 1 "1.有改變" 2 "2.跟以前一樣" 9 "9.missing"
+label value cs209f05 cs209f05
+label define cs209f06 0 "0.跳答" 1 "1.有改變" 2 "2.跟以前一樣" 9 "9.missing"
+label value cs209f06 cs209f06
+label define cs209f07 0 "0.跳答" 1 "1.有改變" 2 "2.跟以前一樣" 9 "9.missing"
+label value cs209f07 cs209f07
+label define cs209f08 0 "0.跳答" 1 "1.有改變" 2 "2.跟以前一樣" 9 "9.missing"
+label value cs209f08 cs209f08
+label define cs209f09 0 "0.跳答" 1 "1.有改變" 2 "2.跟以前一樣" 9 "9.missing"
+label value cs209f09 cs209f09
+label define cs209f10 0 "0.跳答" 1 "1.有改變" 2 "2.跟以前一樣" 9 "9.missing"
+label value cs209f10 cs209f10
+label define cs209f11 0 "0.跳答" 1 "1.有改變" 2 "2.跟以前一樣" 9 "9.missing"
+label value cs209f11 cs209f11
+label define cs301000 1 "1.沒有" 2 "2.1人" 3 "3.2-3人" 4 "4.4-5人" 5 "5.6-9人" 6 "6.10-14人" 7 "7.15人以上" 9 "9.missing"
+label value cs301000 cs301000
+label define cs302000 1 "1.不認識別班同學" 2 "2.5人以下" 3 "3.6-9人" 4 "4.10-19人" 5 "5.20-29人" 6 "6.30-49人" 7 "7.50人以上" 9 "9.missing"
+label value cs302000 cs302000
+label define cs303000 1 "1.常常擔心" 2 "2.有時候會擔心" 3 "3.很少擔心" 4 "4.幾乎不會擔心" 9 "9.missing"
+label value cs303000 cs303000
+label define cs304000 1 "1.都認識你" 2 "2.大部分認識" 3 "3.大部分不認識" 4 "4.都不認識" 9 "9.missing"
+label value cs304000 cs304000
+label define cs305000 1 "1.沒有" 2 "2.一位" 3 "3.二位" 4 "4.三位" 5 "5.四位" 6 "6.五位以上" 9 "9.missing"
+label value cs305000 cs305000
+label define cs306000 1 "1.幾乎都值得尊重" 2 "2.大部分值得尊重" 3 "3.大概一半一半" 4 "4.大部分不值得尊重" 5 "5.幾乎都不值得尊重" 9 "9.missing"
+label value cs306000 cs306000 
+label define cs307000 1 "1.整個月" 2 "2.半個月以上" 3 "3.10天至15天" 4 "4.1週至9天" 5 "5.5至6天" 6 "6.3至4天" 7 "7.1至2天" 8 "8.不到1天" 9 "9.0天" 99 "99.missing"
+label value cs307000 cs307000
+label define cs308000 1 "1.我落後很多，很難跟得上" 2 "2.我有點落後，可能跟得上" 3 "3.只落後一點點，很快就跟上了" 4 "4.大部分都跟得上" 5 "5.我的進度超前" 9 "9.missing"
+label value cs308000 cs308000
+label define cs309000 1 "1.全班五名以內" 2 "2.全班六至十名" 3 "3.全班十一至二十名" 4 "4.全班二十一至三十名" 5 "5.全班三十名以後" 9 "9.missing"
+label value cs309000 cs309000
+label define cs310000 1 "1.好很多" 2 "2.好一些" 3 "3.差不多" 4 "4.差一些" 5 "5.差很多" 6 "6.不知道" 9 "9.missing"
+label value cs310000 cs310000
+label define cs311001 1 "1.很困難" 2 "2.還算困難" 3 "3.不太困難" 4 "4.一點也不困難" 9 "9.missing"
+label value cs311001 cs311001
+label define cs311002 1 "1.很困難" 2 "2.還算困難" 3 "3.不太困難" 4 "4.一點也不困難" 9 "9.missing"
+label value cs311002 cs311002
+label define cs311003 1 "1.很困難" 2 "2.還算困難" 3 "3.不太困難" 4 "4.一點也不困難" 9 "9.missing"
+label value cs311003 cs311003
+label define cs312000 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs312000 cs312000
+label define cs312a00 0 "0.跳答" 1 "1次" 2 "2.2次" 3 "3.3次" 4 "4.都及格" 9 "9.missing"
+label value cs312a00 cs312a00
+label define cs312b00 0 "0.跳答" 1 "1次" 2 "2.2次" 3 "3.3次" 4 "4.都及格" 9 "9.missing"
+label value cs312b00 cs312b00
+label define cs312c00 0 "0.跳答" 1 "1次" 2 "2.2次" 3 "3.3次" 4 "4.都及格" 9 "9.missing"
+label value cs312c00 cs312c00
+label define cs313000 1 "1.很關心" 2 "2.還算關心" 3 "3.不太關心" 4 "4.很不關心" 9 "9.missing"
+label value cs313000 cs313000
+label define cs314000 1 "1.幾乎都喜歡" 2 "2.大部分喜歡" 3 "3.大概一半一半" 4 "4.大部分不喜歡" 5 "5.幾乎都不喜歡" 9 "9.missing"
+label value cs314000 cs314000
+label define cs315000 1 "1.很喜歡" 2 "2.還算喜歡" 3 "3.不太喜歡" 4 "4.很不喜歡" 9 "9.missing"
+label value cs315000 cs315000
+label define cs316000 1 "1.經常會" 2 "2.有時會" 3 "3.很少會" 4 "4.不會" 9 "9.missing"
+label value cs316000 cs316000
+label define cs316a00 0 "0.跳答" 1 "1.很有幫助" 2 "2.還算有幫助" 3 "3.不太有幫助" 4 "4.完全沒幫助" 9 "9.missing"
+label value cs316a00 cs316a00
+label define cs317001 1 "1.很符合" 2 "2.符合" 3 "3.不符合" 4 "4.很不符合" 9 "9.missing"
+label value cs317001 cs317001
+label define cs317002 1 "1.很符合" 2 "2.符合" 3 "3.不符合" 4 "4.很不符合" 9 "9.missing"
+label value cs317002 cs317002
+label define cs317003 1 "1.很符合" 2 "2.符合" 3 "3.不符合" 4 "4.很不符合" 9 "9.missing"
+label value cs317003 cs317003
+label define cs317004 1 "1.很符合" 2 "2.符合" 3 "3.不符合" 4 "4.很不符合" 9 "9.missing"
+label value cs317004 cs317004
+label define cs318001 1 "1.很同意" 2 "2.同意" 3 "3.不同意" 4 "4.很不同意" 9 "9.missing"
+label value cs318001 cs318001
+label define cs318002 1 "1.很同意" 2 "2.同意" 3 "3.不同意" 4 "4.很不同意" 9 "9.missing"
+label value cs318002 cs318002
+label define cs318003 1 "1.很同意" 2 "2.同意" 3 "3.不同意" 4 "4.很不同意" 9 "9.missing"
+label value cs318003 cs318003
+label define cs319000 1 "1.很有趣" 2 "2.還算有趣" 3 "3.有點無聊" 4 "4.很無聊" 9 "9.missing"
+label value cs319000 cs319000
+label define cs320000 1 "1.很有趣" 2 "2.還算有趣" 3 "3.有點無聊" 4 "4.很無聊" 9 "9.missing"
+label value cs320000 cs320000
+label define cs321000 1 "1.很用功" 2 "2.用功" 3 "3.還算用功" 4 "4.不太用功" 5 "5.很不用功" 9 "9.missing"
+label value cs321000 cs321000
+label define cs322000 1 "1.同學" 2 "2.導師" 3 "3.輔導室老師" 4 "4.父母" 5 "5.誰都不找" 6 "6.其他" 9 "9.missing"
+label value cs322000 cs322000
+label define cs323001 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs323001 cs323001
+label define cs323002 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs323002 cs323002
+label define cs323003 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs323003 cs323003
+label define cs323004 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs323004 cs323004
+label define cs324000 1 "1.通常願意幫助別人" 2 "2.只管自己的事情" 3 "3.一半一半" 9 "9.missing"
+label value cs324000 cs324000
+label define cs325000 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs325000 cs325000
+label define cs326000 1 "1.很同意" 2 "2.同意" 3 "3.不同意" 4 "4.很不同意" 9 "9.missing"
+label value cs326000 cs326000
+label define cs327000 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs327000 cs327000
+label define cs327a00 0 "0.跳答" 1 "1.國小" 2 "2.國一" 3 "3.國二" 4 "4.國三" 9 "9.missing"
+label value cs327a00 cs327a00
+label define cs328001 1 "1.曾經" 2 "2.不曾" 9 "9.missing"
+label value cs328001 cs328001
+label define cs328002 1 "1.曾經" 2 "2.不曾" 9 "9.missing"
+label value cs328002 cs328002
+label define cs328003 1 "1.曾經" 2 "2.不曾" 9 "9.missing"
+label value cs328003 cs328003
+label define cs329000 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs329000 cs329000
+label define cs329a01 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs329a01 cs329a01
+label define cs329a02 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs329a02 cs329a02
+label define cs329a03 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs329a03 cs329a03
+label define cs329a04 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs329a04 cs329a04
+label define cs329a05 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs329a05 cs329a05
+label define cs329a06 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs329a06 cs329a06
+label define cs401000 1 "1.會" 2 "2.不會" 9 "9.missing"
+label value cs401000 cs401000
+label define cs402000 1 "1.會" 2 "2.不會" 9 "9.missing"
+label value cs402000 cs402000
+label define cs402a01 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs402a01 cs402a01
+label define cs402a02 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs402a02 cs402a02
+label define cs402a03 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs402a03 cs402a03
+label define cs402a04 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs402a04 cs402a04
+label define cs402a05 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs402a05 cs402a05
+label define cs402a06 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs402a06 cs402a06
+label define cs402a07 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs402a07 cs402a07
+label define cs403000 1 "1.公立高中" 2 "2.私立高中" 3 "3.高職" 4 "4.專科" 5 "5.其他" 9 "9.missing"
+label value cs403000 cs403000
+label define cs403a00 0 "0.跳答" 1 "1.離家近的就好" 2 "2.一切照排名先後" 3 "3.原校高中部" 4 "4.如果前面志願的學校進不去，就選擇離家近的" 5 "5.其他" 9 "9.missing"
+label value cs403a00 cs403a00
+label define cs404000 1 "1.公立高中" 2 "2.私立高中" 3 "3.高職" 4 "4.專科" 5 "5.原校高中部" 6 "6.不知道" 9 "9.missing"
+label value cs404000 cs404000
+label define cs405000 1 "1.父母" 2 "2.自己" 3 "3.父母和自己一起" 4 "4.老師" 5 "5.其他" 9 "9.missing"
+label value cs405000 cs405000
+label define cs406000 1 "1.國中畢業" 2 "2.高中（職）畢業" 3 "3.專科畢業" 4 "4.大學或技術學院畢業" 5 "5.碩士畢業" 6 "6.博士畢業" 7 "7.其他" 9 "9.missing"
+label value cs406000 cs406000
+label define cs407000 1 "1.有" 2 "2.還沒有決定" 3 "3.唸不唸都無所謂" 4 "4.沒有計畫唸大學" 5 "5.其他" 9 "9.missing"
+label value cs407000 cs407000
+label define cs408000 1 "1.有" 2 "2.聽說要辦還沒辦" 3 "3.沒有" 9 "9.missing"
+label value cs408000 cs408000
+label define cs409000 1 "1.很清楚" 2 "2.還算清楚" 3 "3.不太清楚" 4 "4.很不清楚" 9 "9.missing"
+label value cs409000 cs409000
+label define cs410000 1 "1.新的方式" 2 "2.以前聯考" 3 "3.都一樣" 9 "9.missing"
+label value cs410000 cs410000
+label define cs411000 1 "1.新的方式" 2 "2.以前聯考" 3 "3.都一樣" 9 "9.missing"
+label value cs411000 cs411000
+label define cs412000 1 "1.新的方式" 2 "2.以前聯考" 3 "3.都一樣" 9 "9.missing"
+label value cs412000 cs412000
+label define cs413000 1 "1.新的方式" 2 "2.以前聯考" 3 "3.都一樣" 9 "9.missing"
+label value cs413000 cs413000
+label define cs501000 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs501000 cs501000
+label define cs501a00 0 "0.跳答" 1 "1.是" 2 "2.不是" 9 "9.missing"
+label value cs501a00 cs501a00
+label define cs501001 99999 "99999.missing"
+label value cs501001 cs501001
+label define cs501002 0 "00.跳答" 99 "99.missing"
+label value cs501002 cs501002
+label define cs501a03 0 "0.跳答" 1 "1.是" 2 "2.不是" 9 "9.missing"
+label value cs501a03 cs501a03
+label define cs501b03 0 "0.跳答" 1 "1.是" 2 "2.不是" 9 "9.missing"
+label value cs501b03 cs501b03
+label define cs501c03 0 "0.跳答" 1 "1.是" 2 "2.不是" 9 "9.missing"
+label value cs501c03 cs501c03
+label define cs501d03 0 "0.跳答" 1 "1.是" 2 "2.不是" 9 "9.missing"
+label value cs501d03 cs501d03
+label define cs501e03 0 "0.跳答" 1 "1.是" 2 "2.不是" 9 "9.missing"
+label value cs501e03 cs501e03
+label define cs501f03 0 "0.跳答" 1 "1.是" 2 "2.不是" 9 "9.missing"
+label value cs501f03 cs501f03
+label define cs501g03 0 "0.跳答" 1 "1.是" 2 "2.不是" 9 "9.missing"
+label value cs501g03 cs501g03
+label define cs501h03 0 "0.跳答" 1 "1.是" 2 "2.不是" 9 "9.missing"
+label value cs501h03 cs501h03
+label define cs501004 0 "0.跳答" 1 "1.是" 2 "2.不是" 9 "9.missing"
+label value cs501004 cs501004
+label define cs501a04 0 "0.跳答" 1 "1.父親" 2 "2.母親" 3 "3.父母親一起" 4 "4.自己" 5 "5.老師" 6 "6.同學" 7 "7.其他" 9 "9.missing"
+label value cs501a04 cs501a04
+label define cs501b04 0 "0.跳答" 1 "1.同學或朋友介紹或邀約" 2 "2.補習班廣告或打電話推銷" 3 "3.家長收集的資訊" 4 "4.自己去打聽" 5 "5.上網路找的" 6 "6.兄姊或其他認識的人在那補過" 7 "7.其他" 9 "9.missing"
+label value cs501b04 cs501b04
+label define cs501c04 0 "0.跳答" 1 "1.0人" 2 "2.1-2人" 3 "3.3-4人" 4 "4.5-9人" 5 "5.10人以上" 9 "9.missing"
+label value cs501c04 cs501c04
+label define cs501d04 0 "0.跳答" 1 "1.0人" 2 "2.1-2人" 3 "3.3-4人" 4 "4.5-9人" 5 "5.10人以上" 9 "9.missing"
+label value cs501d04 cs501d04
+label define cs501e04 0 "0.跳答" 1 "1.0人" 2 "2.1-2人" 3 "3.3-4人" 4 "4.5-9人" 5 "5.10人以上" 9 "9.missing"
+label value cs501e04 cs501e04
+label define cs502000 0 "0.跳答" 1 "1.很需要" 2 "2.還算需要" 3 "3.不太需要" 4 "4.很不需要" 9 "9.missing"
+label value cs502000 cs502000
+label define cs503000 0 "0.跳答" 1 "1.有很大的衝突" 2 "2.有一些衝突" 3 "3.沒有衝突" 9 "9.missing"
+label value cs503000 cs503000
+label define cs503a01 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs503a01 cs503a01
+label define cs503a02 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs503a02 cs503a02
+label define cs503a03 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs503a03 cs503a03
+label define cs503a04 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs503a04 cs503a04
+label define cs503a05 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs503a05 cs503a05
+label define cs504000 0 "0.跳答" 1 "1.知道" 2 "2.不知道" 3 "3.不確定" 9 "9.missing"
+label value cs504000 cs504000
+label define cs505000 0 "0.跳答" 1 "1.自己去" 2 "2.和同學一起去" 3 "3.家人接送" 4 "4.其他" 9 "9.missing"
+label value cs505000 cs505000
+label define cs506000 0 "0.跳答" 1 "1.10分鐘以內" 2 "2.10-20分鐘" 3 "3.20-30分鐘" 4 "4.30分鐘以上" 9 "9.missing"
+label value cs506000 cs506000
+label define cs507000 1 "1.鼓勵" 2 "2.不鼓勵" 3 "3.不會管" 9 "9.missing"
+label value cs507000 cs507000
+label define cs508000 1 "1.鼓勵" 2 "2.不鼓勵" 3 "3.不會管" 9 "9.missing"
+label value cs508000 cs508000
+label define cs509000 1 "1.都沒有" 2"2.5人以下" 3 "3.6-9人" 4 "4.10-19人" 5 "5.20-29人" 6 "30-49人" 7 "50人以上" 9 "9.missing"
+label value cs509000 cs509000
+label define cs510000 1 "1.有" 2 "2.沒有" 3 "3.不知道" 9 "9.missing"
+label value cs510000 cs510000
+label define cs601000 1 "1.一個尊敬長輩的人" 2 "2.一個善於交友的人" 3 "3.一個做人做事獨立的人" 9 "9.missing"
+label value cs601000 cs601000
+label define cs602001 1 "1.很重要" 2 "2.重要" 3 "3.還算重要" 4 "4.不太重要" 5 "5.很不重要" 9 "9.missing"
+label value cs602001 cs602001
+label define cs602002 1 "1.很重要" 2 "2.重要" 3 "3.還算重要" 4 "4.不太重要" 5 "5.很不重要" 9 "9.missing"
+label value cs602002 cs602002
+label define cs602003 1 "1.很重要" 2 "2.重要" 3 "3.還算重要" 4 "4.不太重要" 5 "5.很不重要" 9 "9.missing"
+label value cs602003 cs602003
+label define cs602004 1 "1.很重要" 2 "2.重要" 3 "3.還算重要" 4 "4.不太重要" 5 "5.很不重要" 9 "9.missing"
+label value cs602004 cs602004
+label define cs603001 1 "1.很贊成" 2 "2.贊成" 3 "3.不贊成" 4 "4.很不贊成" 9 "9.missing"
+label value cs603001 cs603001
+label define cs603002 1 "1.很贊成" 2 "2.贊成" 3 "3.不贊成" 4 "4.很不贊成" 9 "9.missing"
+label value cs603002 cs603002
+label define cs603003 1 "1.很贊成" 2 "2.贊成" 3 "3.不贊成" 4 "4.很不贊成" 9 "9.missing"
+label value cs603003 cs603003
+label define cs604001 1 "1.很贊成" 2 "2.贊成" 3 "3.不贊成" 4 "4.很不贊成" 9 "9.missing"
+label value cs604001 cs604001
+label define cs604002 1 "1.很贊成" 2 "2.贊成" 3 "3.不贊成" 4 "4.很不贊成" 9 "9.missing"
+label value cs604002 cs604002
+label define cs604003 1 "1.很贊成" 2 "2.贊成" 3 "3.不贊成" 4 "4.很不贊成" 9 "9.missing"
+label value cs604003 cs604003
+label define cs701000 1 "1.有" 2 "2.沒有" 3 "3.不知道" 9 "9.missing"
+label value cs701000 cs701000
+label define cs702000 1 "1.很同意" 2 "2.同意" 3 "3.不同意" 4 "4.很不同意" 9 "9.missing"
+label value cs702000 cs702000
+label define cs703000 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs703000 cs703000
+label define cs704000  0 "0.跳答" 1 "1.小學以前" 2 "2.小學時期" 3 "3.國中時期" 9 "9.missing"
+label value cs704000 cs704000
+label define cs705000 0 "00.跳答" 1 "01.同班" 2 "02.校內社團或活動" 3 "03.就是在校內" 4 "04.校外社團或團體" 5 "05.校際活動" 6 "06.親戚" 7 "07.因家人關係" 8 "08.補習班" 9 "09.網路" 10 "10.筆友" 11 "11.鄰居" 12 "12.其他" 99 "99.missing"
+label value cs705000 cs705000
+label define cs706000 0 "0.跳答" 1 "1.是" 2 "2.否" 9 "9.missing"
+label value cs706000 cs706000
+label define cs707000 0 "0.跳答" 1 "1.每天見面" 2 "2.一星期見2、3次" 3 "3.一星期見1次" 4 "4.一星期以上才見1次面" 9 "9.missing"
+label value cs707000 cs707000 
+label define cs708000 0 "0.跳答" 1 "1.比我好很多" 2 "2.比我好一些" 3 "3.和我差不多" 4 "4.比我差一些" 5 "5.比我差好多" 6 "6.不知道" 7 "7.他目前沒有就學" 9 "9.missing"
+label value cs708000 cs708000
+label define cs709000 0 "0.跳答" 1 "1.經常" 2 "2.有時" 3 "3.很少" 4 "4.從未" 9 "9.missing"
+label value cs709000 cs709000
+label define cs710000 0 "0.跳答" 1 "1.經常" 2 "2.有時" 3 "3.很少" 4 "4.從未" 9 "9.missing"
+label value cs710000 cs710000
+label define cs711000 0 "0.跳答" 1 "1.知道" 2 "2.不知道" 9 "9.missing"
+label value cs711000 cs711000
+label define cs712000 0 "0.跳答" 1 "1.知道" 2 "2.不知道" 9 "9.missing"
+label value cs712000 cs712000
+label define cs713000 0 "0.跳答" 1 "1.知道，而且很熟" 2 "2.知道，但不太熟" 3 "3.不知道" 9 "9.missing"
+label value cs713000 cs713000
+label define cs714a02 0 "0.不適用" 1 "1.男" 2 "2.女" 9 "9.missing"
+label value cs714a02 cs714a02
+label define cs714a03 0 "0.不適用" 1 "1.小學以前" 2 "2.小學時期" 3 "3.國中時期" 9 "9.missing"
+label value cs714a03 cs714a03
+label define cs714a04 0 "00.不適用" 1 "01.同班" 2 "02.校內社團或活動" 3 "03.就是在校內" 4 "04.校外社團或團體" 5 "05.校際活動" 6 "06.親戚" 7 "07.因家人關係" 8 "08.補習班" 9 "09.網路" 10 "10.筆友" 11 "11.鄰居" 12 "12.其他" 99 "99.missing"
+label value cs714a04 cs714a04
+label define cs714a05 0 "0.不適用" 1 "1.同班" 2 "2.不同班(同為樣本班)" 3 "3.不同班(非樣本班)" 9 "9.missing"
+label value cs714a05 cs714a05
+label define cs714a06 0 "0.不適用" 1 "1.經常" 2 "2.有時" 3 "3.很少" 4 "4.從未" 9 "9.missing"
+label value cs714a06 cs714a06
+label define cs714a07 0 "0.不適用" 1 "1.經常" 2 "2.有時" 3 "3.很少" 4 "4.從未" 9 "9.missing"
+label value cs714a07 cs714a07
+label define cs714a08 0 "0.不適用" 1 "1.經常" 2 "2.有時" 3 "3.很少" 4 "4.從未" 9 "9.missing"
+label value cs714a08 cs714a08
+label define cs714a09 0 "0.不適用" 1 "1.比我好很多" 2 "2.比我好一些" 3 "3.和我差不多" 4 "4.比我差一些" 5 "5.比我差好多" 6 "6.不知道" 7 "7.他目前沒有就學" 9 "9.missing"
+label value cs714a09 cs714a09
+label define cs714a10 0 "0.不適用" 1 "1.經常" 2 "2.有時" 3 "3.很少" 4 "4.從未" 9 "9.missing"
+label value cs714a10 cs714a10
+label define cs714a11 0 "0.不適用" 1 "1.經常" 2 "2.有時" 3 "3.很少" 4 "4.從未" 9 "9.missing"
+label value cs714a11 cs714a11
+label define cs714a12 0 "0.不適用" 1 "1.很熟" 2 "2.認識但不熟" 3 "3.不認識" 9 "9.missing"
+label value cs714a12 cs714a12
+label define cs714b02 0 "0.不適用" 1 "1.男" 2 "2.女" 9 "9.missing"
+label value cs714b02 cs714b02
+label define cs714b03 0 "0.不適用" 1 "1.小學以前" 2 "2.小學時期" 3 "3.國中時期" 9 "9.missing"
+label value cs714b03 cs714b03
+label define cs714b04 0 "00.不適用" 1 "01.同班" 2 "02.校內社團或活動" 3 "03.就是在校內" 4 "04.校外社團或團體" 5 "05.校際活動" 6 "06.親戚" 7 "07.因家人關係" 8 "08.補習班" 9 "09.網路" 10 "10.筆友" 11 "11.鄰居" 12 "12.其他" 99 "99.missing"
+label value cs714b04 cs714b04
+label define cs714b05 0 "00.不適用" 1 "1.同班" 2 "2.不同班(同為樣本班)" 3 "3.不同班(非樣本班)" 9 "9.missing"
+label value cs714b05 cs714b05
+label define cs714b06 0 "0.不適用" 1 "1.經常" 2 "2.有時" 3 "3.很少" 4 "4.從未" 9 "9.missing"
+label value cs714b06 cs714b06
+label define cs714b07 0 "0.不適用" 1 "1.經常" 2 "2.有時" 3 "3.很少" 4 "4.從未" 9 "9.missing"
+label value cs714b07 cs714b07
+label define cs714b08 0 "0.不適用" 1 "1.經常" 2 "2.有時" 3 "3.很少" 4 "4.從未" 9 "9.missing"
+label value cs714b08 cs714b08
+label define cs714b09 0 "0.不適用" 1 "1.比我好很多" 2 "2.比我好一些" 3 "3.和我差不多" 4 "4.比我差一些" 5 "5.比我差好多" 6 "6.不知道" 7 "7.他目前沒有就學" 9 "9.missing"
+label value cs714b09 cs714b09
+label define cs714b10 0 "0.不適用" 1 "1.經常" 2 "2.有時" 3 "3.很少" 4 "4.從未" 9 "9.missing"
+label value cs714b10 cs714b10
+label define cs714b11 0 "0.不適用" 1 "1.經常" 2 "2.有時" 3 "3.很少" 4 "4.從未" 9 "9.missing"
+label value cs714b11 cs714b11
+label define cs714b12 0 "0.不適用" 1 "1.很熟" 2 "2.認識但不熟" 3 "3.不認識" 9 "9.missing"
+label value cs714b12 cs714b12
+label define cs714b13 0 "0.不適用" 1 "1.很熟" 2 "2.認識但不熟" 3 "3.不認識" 9 "9.missing"
+label value cs714b13 cs714b13
+label define cs714c02 0 "0.不適用" 1 "1.男" 2 "2.女" 9 "9.missing"
+label value cs714c02 cs714c02
+label define cs714c03 0 "0.不適用" 1 "1.小學以前" 2 "2.小學時期" 3 "3.國中時期" 9 "9.missing"
+label value cs714c03 cs714c03
+label define cs714c04 0 "00.不適用" 1 "01.同班" 2 "02.校內社團或活動" 3 "03.就是在校內" 4 "04.校外社團或團體" 5 "05.校際活動" 6 "06.親戚" 7 "07.因家人關係" 8 "08.補習班" 9 "09.網路" 10 "10.筆友" 11 "11.鄰居" 12 "12.其他" 99 "99.missing"
+label value cs714c04 cs714c04
+label define cs714c05 0 "00.不適用" 1 "1.同班" 2 "2.不同班(同為樣本班)" 3 "3.不同班(非樣本班)" 9 "9.missing"
+label value cs714c05 cs714c05
+label define cs714c06 0 "0.不適用" 1 "1.經常" 2 "2.有時" 3 "3.很少" 4 "4.從未" 9 "9.missing"
+label value cs714c06 cs714c06
+label define cs714c07 0 "0.不適用" 1 "1.經常" 2 "2.有時" 3 "3.很少" 4 "4.從未" 9 "9.missing"
+label value cs714c07 cs714c07
+label define cs714c08 0 "0.不適用" 1 "1.經常" 2 "2.有時" 3 "3.很少" 4 "4.從未" 9 "9.missing"
+label value cs714c08 cs714c08
+label define cs714c09 0 "0.不適用" 1 "1.比我好很多" 2 "2.比我好一些" 3 "3.和我差不多" 4 "4.比我差一些" 5 "5.比我差好多" 6 "6.不知道" 7 "7.他目前沒有就學" 9 "9.missing"
+label value cs714c09 cs714c09
+label define cs714c10 0 "0.不適用" 1 "1.經常" 2 "2.有時" 3 "3.很少" 4 "4.從未" 9 "9.missing"
+label value cs714c10 cs714c10
+label define cs714c11 0 "0.不適用" 1 "1.經常" 2 "2.有時" 3 "3.很少" 4 "4.從未" 9 "9.missing"
+label value cs714c11 cs714c11
+label define cs714c12 0 "0.不適用" 1 "1.很熟" 2 "2.認識但不熟" 3 "3.不認識" 9 "9.missing"
+label value cs714c12 cs714c12
+label define cs714c13 0 "0.不適用" 1 "1.很熟" 2 "2.認識但不熟" 3 "3.不認識" 9 "9.missing"
+label value cs714c13 cs714c13
+label define cs714c14 0 "0.不適用" 1 "1.很熟" 2 "2.認識但不熟" 3 "3.不認識" 9 "9.missing"
+label value cs714c14 cs714c14
+label define cs715001 0 "0.沒填好友資訊(無好友)" 1 "1.很符合" 2 "2.符合" 3 "3.不符合" 4 "4.很不符合" 9 "9.missing"
+label value cs715001 cs715001
+label define cs715002 0 "0.沒填好友資訊(無好友)" 1 "1.很符合" 2 "2.符合" 3 "3.不符合" 4 "4.很不符合" 9 "9.missing"
+label value cs715002 cs715002
+label define cs715003 0 "0.沒填好友資訊(無好友)" 1 "1.很符合" 2 "2.符合" 3 "3.不符合" 4 "4.很不符合" 9 "9.missing"
+label value cs715003 cs715003
+label define cs716001 0 "0.沒填好友資訊(無好友)" 1 "1.全部" 2 "2.大多數" 3 "3.有一些" 4 "4.沒有" 9 "9.missing"
+label value cs716001 cs716001
+label define cs716002 0 "0.沒填好友資訊(無好友)" 1 "1.全部" 2 "2.大多數" 3 "3.有一些" 4 "4.沒有" 9 "9.missing"
+label value cs716002 cs716002
+label define cs716003 0 "0.沒填好友資訊(無好友)" 1 "1.全部" 2 "2.大多數" 3 "3.有一些" 4 "4.沒有" 9 "9.missing"
+label value cs716003 cs716003
+label define cs716004 0 "0.沒填好友資訊(無好友)" 1 "1.全部" 2 "2.大多數" 3 "3.有一些" 4 "4.沒有" 9 "9.missing"
+label value cs716004 cs716004
+label define cs717000 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs717000 cs717000
+label define cs719000 0 "0.沒填好友資訊(無好友)" 1 "1.常常" 2 "2.有時候" 3 "3.偶爾" 4 "4.從未" 5 "5.不知道" 9 "9.missing"
+label value cs719000 cs719000
+label define cs720000 0 "0.沒填好友資訊(無好友)" 1 "1.常常" 2 "2.有時候" 3 "3.偶爾" 4 "4.從未" 5 "5.不知道" 9 "9.missing"
+label value cs720000 cs720000
+label define cs721000 0 "0.沒填好友資訊(無好友)" 1 "1.公立高中" 2 "2.私立高中" 3 "3.高職" 4 "4.專科" 5 "5.原校高中部" 6 "6.不知道" 9 "9.missing"
+label value cs721000 cs721000
+label define cs801000 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs801000 cs801000
+label define cs802000 1 "1.曾經" 2 "2.不曾" 9 "9.missing"
+label value cs802000 cs802000
+label define cs803000 0 "0.沒有兄弟姊妹" 1 "1.經常會" 2 "2.有時候會" 3 "3.很少會" 4 "4.從來不會" 9 "9.missing"
+label value cs803000 cs803000
+label define cs804000 1 "1.經常會" 2 "2.有時候會" 3 "3.很少會" 4 "4.從來不會" 9 "9.missing"
+label value cs804000 cs804000
+label define cs805001 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs805001 cs805001
+label define cs805a01 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs805a01 cs805a01
+label define cs805b01 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs805b01 cs805b01
+label define cs805c01 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs805c01 cs805c01
+label define cs805d01 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs805d01 cs805d01
+label define cs805e01 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs805e01 cs805e01
+label define cs805f01 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs805f01 cs805f01
+label define cs805g01 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs805g01 cs805g01
+label define cs805h01 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs805h01 cs805h01
+label define cs805002 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs805002 cs805002
+label define cs805a02 0 "0.跳答" 9 "9.missing"
+label value cs805a02 cs805a02
+label define cs805003 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs805003 cs805003
+label define cs806000 9 "9.missing"
+label value cs806000 cs806000
+label define cs807000 9 "9.missing"
+label value cs807000 cs807000
+label define cs808000 0 "0.不適用" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs808000 cs808000
+label define cs809000 0 "0.不適用" 1 "1.很希望" 2 "2.還算希望" 3 "3.不太希望" 4 "4.很不希望" 9 "9.missing"
+label value cs809000 cs809000
+label define cs810f00 0 "0.不適用" 1 "1.幾乎都知道" 2 "2.大部分知道" 3 "3.大部分不知道" 4 "4.幾乎不知道" 9 "9.missing"
+label value cs810f00 cs810f00
+label define cs810m00 0 "0.不適用" 1 "1.幾乎都知道" 2 "2.大部分知道" 3 "3.大部分不知道" 4 "4.幾乎不知道" 9 "9.missing"
+label value cs810m00 cs810m00
+label define cs811f00 0 "0.不適用" 1 "1.很滿意" 2 "2.還算滿意" 3 "3.不太滿意" 4 "4.很不滿意" 9 "9.missing"
+label value cs811f00 cs811f00
+label define cs811m00 0 "0.不適用" 1 "1.很滿意" 2 "2.還算滿意" 3 "3.不太滿意" 4 "4.很不滿意" 9 "9.missing"
+label value cs811m00 cs811m00
+label define cs812000 0 "0.不適用" 1 "1.國中畢業" 2 "2.高中（職）畢業" 3 "3.專科畢業" 4 "4.大學或技術學院畢業" 5 "5.碩士畢業" 6 "6.博士畢業" 7 "7.不知道" 9 "9.missing"
+label value cs812000 cs812000
+label define cs813000 0 "0.不適用" 1 "1.半小時以內" 2 "2.半小時至一小時" 3 "3.一小時至兩小時" 4 "4.兩小時至三小時" 5 "5.三小時至四小時" 6 "6.四小時及以上" 7 "7.從未" 9 "9.missing"
+label value cs813000 cs813000
+label define cs814000 0 "0.不適用或跳答" 1 "1.經常" 2 "2.有時" 3 "3.很少" 4 "4.從未" 9 "9.missing"
+label value cs814000 cs814000
+label define cs815000 0 "0.不適用" 1 "1.半小時以內" 2 "2.半小時至一小時" 3 "3.一小時至兩小時" 4 "4.兩小時至三小時" 5 "5.三小時至四小時" 6 "6.四小時及以上" 7 "7.從未" 9 "9.missing"
+label value cs815000 cs815000
+label define cs816000 0 "0.不適用" 1 "1.經常如此" 2 "2.有時" 3 "3.很少" 4 "4.從未" 9 "9.missing"
+label value cs816000 cs816000
+label define cs817f00 0 "0.不適用" 1 "1.經常" 2 "2.有時" 3 "3.很少" 4 "4.從未" 9 "9.missing"
+label value cs817f00 cs817f00
+label define cs817m00 0 "0.不適用" 1 "1.經常" 2 "2.有時" 3 "3.很少" 4 "4.從未" 9 "9.missing"
+label value cs817m00 cs817m00
+label define cs818000 0 "0.不適用" 1 "1.經常如此" 2 "2.有時" 3 "3.很少" 4 "4.從未" 9 "9.missing"
+label value cs818000 cs818000
+label define cs819001 0 "0.不適用" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs819001 cs819001
+label define cs819002 0 "0.不適用" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs819002 cs819002
+label define cs819003 0 "0.不適用" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs819003 cs819003
+label define cs819004 0 "0.不適用" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs819004 cs819004
+label define cs901000 1 "1.很快樂" 2 "2.還算快樂" 3 "3.不太快樂" 4 "4.很不快樂" 9 "9.missing"
+label value cs901000 cs901000
+label define cs902000 1 "1.極佳" 2 "2.很好" 3 "3.還好" 4 "4.不太好" 5 "5.很不好" 9 "9.missing"
+label value cs902000 cs902000
+label define cs903001 99 "99.missing"
+label value cs903001 cs903001
+label define cs903002 99 "99.missing"
+label value cs903002 cs903002
+label define cs903003 99 "99.missing"
+label value cs903003 cs903003
+label define cs903004 99 "99.missing"
+label value cs903004 cs903004
+label define cs904001 99 "99.missing"
+label value cs904001 cs904001 
+label define cs904002 99 "99.missing"
+label value cs904002 cs904002
+label define cs904003 99 "99.missing"
+label value cs904003 cs904003
+label define cs904004 99 "99.missing"
+label value cs904004 cs904004
+label define cs905000 99 "99.missing"
+label value cs905000 cs905000
+label define cs906000 99 "99.missing"
+label value cs906000 cs906000
+label define cs907001 999 "999.missing"
+label value cs907001 cs907001
+label define cs907002 999 "999.missing"
+label value cs907002 cs907002
+label define cs907a00 99 "99.missing"
+label value cs907a00 cs907a00
+label define cs907b01 1 "1.增加" 2 "2.減少" 3 "3.都沒有改變" 9 "9.missing"
+label value cs907b01 cs907b01
+label define cs907b02 99 "99.missing"
+label value cs907b02 cs907b02
+label define cs908000 1 "1.還沒開始長出" 2 "2.只長出一點點" 3 "3.很明顯地在長" 4 "4.已經長好了" 9 "9.missing"
+label value cs908000 cs908000
+label define cs909000 1 "1.還沒開始長出" 2 "2.只冒出一點點" 3 "3.長得很多" 9 "9.missing"
+label value cs909000 cs909000
+label define cs910000 0 "0.跳答" 1 "1.還沒開始長出" 2 "2.只長出一點點" 3 "3.長得很快" 9 "9.missing"
+label value cs910000 cs910000
+label define cs911000 0 "0.跳答" 1 "1.沒有改變" 2 "2.只改變一點點" 3 "3.改變得很明顯" 9 "9.missing"
+label value cs911000 cs911000
+label define cs912000 0 "0.跳答" 1 "1.很痛/很不舒服" 2 "2.有點痛/有點不舒服" 3 "3.不痛/沒有不舒服" 4 "4.月經還沒開始" 9 "9.missing"
+label value cs912000 cs912000
+label define cs913001 1 "1.非常符合" 2 "2.還算符合" 3 "3.不太符合" 4 "4.非常不符合" 9 "9.missing"
+label value cs913001 cs913001
+label define cs913002 1 "1.非常符合" 2 "2.還算符合" 3 "3.不太符合" 4 "4.非常不符合" 9 "9.missing"
+label value cs913002 cs913002
+label define cs913003 1 "1.非常符合" 2 "2.還算符合" 3 "3.不太符合" 4 "4.非常不符合" 9 "9.missing"
+label value cs913003 cs913003
+label define cs913004 1 "1.非常符合" 2 "2.還算符合" 3 "3.不太符合" 4 "4.非常不符合" 9 "9.missing"
+label value cs913004 cs913004
+label define cs913005 1 "1.非常符合" 2 "2.還算符合" 3 "3.不太符合" 4 "4.非常不符合" 9 "9.missing"
+label value cs913005 cs913005
+label define cs913006 1 "1.非常符合" 2 "2.還算符合" 3 "3.不太符合" 4 "4.非常不符合" 9 "9.missing"
+label value cs913006 cs913006
+label define cs913007 1 "1.非常符合" 2 "2.還算符合" 3 "3.不太符合" 4 "4.非常不符合" 9 "9.missing"
+label value cs913007 cs913007
+label define cs913008 1 "1.非常符合" 2 "2.還算符合" 3 "3.不太符合" 4 "4.非常不符合" 9 "9.missing"
+label value cs913008 cs913008
+label define cs913009 1 "1.非常符合" 2 "2.還算符合" 3 "3.不太符合" 4 "4.非常不符合" 9 "9.missing"
+label value cs913009 cs913009
+label define cs913010 1 "1.非常符合" 2 "2.還算符合" 3 "3.不太符合" 4 "4.非常不符合" 9 "9.missing"
+label value cs913010 cs913010
+label define cs914001 1 "1.很同意" 2 "2.同意" 3 "3.不同意" 4 "4.很不同意" 9 "9.missing"
+label value cs914001 cs914001
+label define cs914002 1 "1.很同意" 2 "2.同意" 3 "3.不同意" 4 "4.很不同意" 9 "9.missing"
+label value cs914002 cs914002
+label define cs914003 1 "1.很同意" 2 "2.同意" 3 "3.不同意" 4 "4.很不同意" 9 "9.missing"
+label value cs914003 cs914003
+label define cs914004 1 "1.很同意" 2 "2.同意" 3 "3.不同意" 4 "4.很不同意" 9 "9.missing"
+label value cs914004 cs914004
+label define cs914005 1 "1.很同意" 2 "2.同意" 3 "3.不同意" 4 "4.很不同意" 9 "9.missing"
+label value cs914005 cs914005
+label define cs914006 1 "1.很同意" 2 "2.同意" 3 "3.不同意" 4 "4.很不同意" 9 "9.missing"
+label value cs914006 cs914006
+label define cs915001 1 "1.一定會" 2 "2.大概會" 3 "3.大概不會" 4 "4.一定不會" 9 "9.missing"
+label value cs915001 cs915001
+label define cs915002 1 "1.一定會" 2 "2.大概會" 3 "3.大概不會" 4 "4.一定不會" 9 "9.missing"
+label value cs915002 cs915002
+label define cs915003 1 "1.一定會" 2 "2.大概會" 3 "3.大概不會" 4 "4.一定不會" 9 "9.missing"
+label value cs915003 cs915003
+label define cs915004 1 "1.一定會" 2 "2.大概會" 3 "3.大概不會" 4 "4.一定不會" 9 "9.missing"
+label value cs915004 cs915004
+label define cs915005 1 "1.一定會" 2 "2.大概會" 3 "3.大概不會" 4 "4.一定不會" 9 "9.missing"
+label value cs915005 cs915005
+label define cs916001 0 "0.不適用" 1 "1.很滿意" 2 "2.還算滿意" 3 "3.不太滿意" 4 "4.很不滿意" 9 "9.missing"
+label value cs916001 cs916001
+label define cs916002 0 "0.不適用" 1 "1.很滿意" 2 "2.還算滿意" 3 "3.不太滿意" 4 "4.很不滿意" 9 "9.missing"
+label value cs916002 cs916002
+label define cs916003 0 "0.不適用" 1 "1.很滿意" 2 "2.還算滿意" 3 "3.不太滿意" 4 "4.很不滿意" 9 "9.missing"
+label value cs916003 cs916003
+label define cs916004 0 "0.不適用" 1 "1.很滿意" 2 "2.還算滿意" 3 "3.不太滿意" 4 "4.很不滿意" 9 "9.missing"
+label value cs916004 cs916004
+label define cs916005 0 "0.不適用" 1 "1.很滿意" 2 "2.還算滿意" 3 "3.不太滿意" 4 "4.很不滿意" 9 "9.missing"
+label value cs916005 cs916005
+label define cs916006 0 "0.不適用" 1 "1.很滿意" 2 "2.還算滿意" 3 "3.不太滿意" 4 "4.很不滿意" 9 "9.missing"
+label value cs916006 cs916006
+label define cs917001 1 "1.從未" 2 "2.偶爾" 3 "3.有時候" 4 "4.常常" 9 "9.missing"
+label value cs917001 cs917001 
+label define cs917002 1 "1.從未" 2 "2.偶爾" 3 "3.有時候" 4 "4.常常" 9 "9.missing"
+label value cs917002 cs917002 
+label define cs917003 1 "1.從未" 2 "2.偶爾" 3 "3.有時候" 4 "4.常常" 9 "9.missing"
+label value cs917003 cs917003
+label define cs917004 1 "1.從未" 2 "2.偶爾" 3 "3.有時候" 4 "4.常常" 9 "9.missing"
+label value cs917004 cs917004
+label define cs917005 1 "1.從未" 2 "2.偶爾" 3 "3.有時候" 4 "4.常常" 9 "9.missing"
+label value cs917005 cs917005
+label define cs917006 1 "1.從未" 2 "2.偶爾" 3 "3.有時候" 4 "4.常常" 9 "9.missing"
+label value cs917006 cs917006
+label define cs917007 1 "1.從未" 2 "2.偶爾" 3 "3.有時候" 4 "4.常常" 9 "9.missing"
+label value cs917007 cs917007
+label define cs917008 1 "1.從未" 2 "2.偶爾" 3 "3.有時候" 4 "4.常常" 9 "9.missing"
+label value cs917008 cs917008
+label define cs917009 1 "1.從未" 2 "2.偶爾" 3 "3.有時候" 4 "4.常常" 9 "9.missing"
+label value cs917009 cs917009
+label define cs918001 0 "0.不適用" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs918001 cs918001
+label define cs918002 0 "0.不適用" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs918002 cs918002
+label define cs918003 0 "0.不適用" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs918003 cs918003
+label define cs918004 0 "0.不適用" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs918004 cs918004
+label define cs918005 0 "0.不適用" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs918005 cs918005
+label define cs918006 0 "0.不適用" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs918006 cs918006
+label define cs918007 0 "0.不適用" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs918007 cs918007
+label define cs918008 0 "0.不適用" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs918008 cs918008
+label define cs918009 0 "0.不適用" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs918009 cs918009
+label define cs918010 0 "0.不適用" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs918010 cs918010
+label define cs918011 0 "0.不適用" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs918011 cs918011
+label define cs918012 0 "0.不適用" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs918012 cs918012
+label define cs918013 0 "0.不適用" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs918013 cs918013
+label define cs918014 0 "0.不適用" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs918014 cs918014
+label define cs918015 0 "0.不適用" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs918015 cs918015
+label define cs919001 1 "1.沒有" 2 "2.有，有點" 3 "3.有，普通" 4 "4.有，嚴重" 5 "5.有，很嚴重" 9 "9.missing"
+label value cs919001 cs919001
+label define cs919002 1 "1.沒有" 2 "2.有，有點" 3 "3.有，普通" 4 "4.有，嚴重" 5 "5.有，很嚴重" 9 "9.missing"
+label value cs919002 cs919002
+label define cs919003 1 "1.沒有" 2 "2.有，有點" 3 "3.有，普通" 4 "4.有，嚴重" 5 "5.有，很嚴重" 9 "9.missing"
+label value cs919003 cs919003
+label define cs919004 1 "1.沒有" 2 "2.有，有點" 3 "3.有，普通" 4 "4.有，嚴重" 5 "5.有，很嚴重" 9 "9.missing"
+label value cs919004 cs919004
+label define cs919005 1 "1.沒有" 2 "2.有，有點" 3 "3.有，普通" 4 "4.有，嚴重" 5 "5.有，很嚴重" 9 "9.missing"
+label value cs919005 cs919005
+label define cs919006 1 "1.沒有" 2 "2.有，有點" 3 "3.有，普通" 4 "4.有，嚴重" 5 "5.有，很嚴重" 9 "9.missing"
+label value cs919006 cs919006
+label define cs919007 1 "1.沒有" 2 "2.有，有點" 3 "3.有，普通" 4 "4.有，嚴重" 5 "5.有，很嚴重" 9 "9.missing"
+label value cs919007 cs919007
+label define cs919008 1 "1.沒有" 2 "2.有，有點" 3 "3.有，普通" 4 "4.有，嚴重" 5 "5.有，很嚴重" 9 "9.missing"
+label value cs919008 cs919008
+label define cs919009 1 "1.沒有" 2 "2.有，有點" 3 "3.有，普通" 4 "4.有，嚴重" 5 "5.有，很嚴重" 9 "9.missing"
+label value cs919009 cs919009
+label define cs919010 1 "1.沒有" 2 "2.有，有點" 3 "3.有，普通" 4 "4.有，嚴重" 5 "5.有，很嚴重" 9 "9.missing"
+label value cs919010 cs919010
+label define cs919011 1 "1.沒有" 2 "2.有，有點" 3 "3.有，普通" 4 "4.有，嚴重" 5 "5.有，很嚴重" 9 "9.missing"
+label value cs919011 cs919011
+label define cs919012 1 "1.沒有" 2 "2.有，有點" 3 "3.有，普通" 4 "4.有，嚴重" 5 "5.有，很嚴重" 9 "9.missing"
+label value cs919012 cs919012
+label define cs919013 1 "1.沒有" 2 "2.有，有點" 3 "3.有，普通" 4 "4.有，嚴重" 5 "5.有，很嚴重" 9 "9.missing"
+label value cs919013 cs919013
+label define cs919014 1 "1.沒有" 2 "2.有，有點" 3 "3.有，普通" 4 "4.有，嚴重" 5 "5.有，很嚴重" 9 "9.missing"
+label value cs919014 cs919014
+label define cs919015 1 "1.沒有" 2 "2.有，有點" 3 "3.有，普通" 4 "4.有，嚴重" 5 "5.有，很嚴重" 9 "9.missing"
+label value cs919015 cs919015
+label define cs919015 1 "1.沒有" 2 "2.有，有點" 3 "3.有，普通" 4 "4.有，嚴重" 5 "5.有，很嚴重" 9 "9.missing"
+label value cs919015 cs919015
+label define cs919016 1 "1.沒有" 2 "2.有，有點" 3 "3.有，普通" 4 "4.有，嚴重" 5 "5.有，很嚴重" 9 "9.missing"
+label value cs919016 cs919016
+label define cs001000 1 "1.沒有" 2 "2.有" 9 "9.missing"
+label value cs001000 cs001000
+label define cs001001 0 "0000.不適用" 9998 "9998.超過9998元" 9999 "9999.missing"
+label value cs001001 cs001001
+label define cs002000 1 "1.經常" 2 "2.有時" 3 "3.很少" 4 "4.從未" 9 "9.missing"
+label value cs002000 cs002000
+label define cs003000 1 "1.沒有" 2 "2.有" 9 "9.missing"
+label value cs003000 cs003000
+label define cs004000 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs004000 cs004000
+label define cs005000 0 "0.跳答" 1 "1.可以" 2 "2.不可以" 9 "9.missing"
+label value cs005000 cs005000
+label define cs006000 1 "1.每天至少一次" 2 "2.每個禮拜兩、三次" 3 "3.大概每個禮拜一次" 4 "4.很少" 5 "5.從來沒有" 9 "9.missing"
+label value cs006000 cs006000
+label define cs007000 0 "0.跳答" 1 "1.家裡" 2 "2.學校" 3 "3.網路咖啡館" 4 "4.補習班" 5 "5.別人家" 6 "6.其他" 9 "9.missing"
+label value cs007000 cs007000
+label define cs008000 0 "0.跳答" 1 "1.不到一個小時" 2 "2.一到兩個小時" 3 "3.二到三個小時" 4 "4.三到五個小時" 5 "5.五個小時以上" 9 "9.missing"
+label value cs008000 cs008000 
+label define cs009000 0 "0.跳答" 1 "1.不到一個小時" 2 "2.一到兩個小時" 3 "3.三到五個小時" 4 "4.六到十小時" 5 "5.十一到二十小時" 6 "6.二十小時以上" 9 "9.missing"
+label value cs009000 cs009000
+label define cs010001 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs010001 cs010001
+label define cs010002 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs010002 cs010002
+label define cs010003 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs010003 cs010003
+label define cs010004 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs010004 cs010004
+label define cs010005 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs010005 cs010005
+label define cs010006 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs010006 cs010006
+label define cs010007 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs010007 cs010007
+label define cs010008 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs010008 cs010008
+label define cs010009 0 "0.跳答" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs010009 cs010009
+label define cs011000 0 "0.跳答" 1 "1.幾乎都知道" 2 "2.大概知道" 3 "3.大概不知道" 4 "4.幾乎都不知道" 9 "9.missing"
+label value cs011000 cs011000
+label define cs012000 0 "0.跳答" 1 "1.幾乎都知道" 2 "2.大概知道" 3 "3.大概不知道" 4 "4.幾乎都不知道" 9 "9.missing"
+label value cs012000 cs012000
+label define cs013001 1 "1.會" 2 "2.不會" 9 "9.missing"
+label value cs013001 cs013001
+label define cs013002 1 "1.會" 2 "2.不會" 9 "9.missing"
+label value cs013002 cs013002
+label define cs013003 1 "1.會" 2 "2.不會" 9 "9.missing"
+label value cs013003 cs013003
+label define cs013004 1 "1.會" 2 "2.不會" 9 "9.missing"
+label value cs013004 cs013004
+label define cs013005 1 "1.會" 2 "2.不會" 9 "9.missing"
+label value cs013005 cs013005
+label define cs013006 1 "1.會" 2 "2.不會" 9 "9.missing"
+label value cs013006 cs013006
+label define cs013007 1 "1.會" 2 "2.不會" 9 "9.missing"
+label value cs013007 cs013007
+label define cs014000 1 "1.不到半個鐘頭" 2 "2.半個鐘頭到一個鐘頭以下" 3 "3.一個鐘頭到兩個鐘頭以下" 4 "4.兩個鐘頭或以上" 5 "5.從來不看" 9 "9.missing"
+label value cs014000 cs014000
+label define cs015000 1 "1.不到半個鐘頭" 2 "2.半個鐘頭到一個鐘頭以下" 3 "3.一個鐘頭到兩個鐘頭以下" 4 "4.兩個鐘頭或以上" 5 "5.從來不看" 9 "9.missing"
+label value cs015000 cs015000
+label define cs016a01 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs016a01 cs016a01
+label define cs016a02 0 "00.跳答" 9 "9.missing"
+label value cs016a02 cs016a02
+label define cs016b00 0 "0.跳答" 1 "1.歌手" 2 "2.影星" 3 "3.歌手兼影星" 9 "9.missing"
+label value cs016b00 cs016b00
+label define cs016c00 0 "0.跳答" 1 "1.男" 2 "2.女" 9 "9.missing"
+label value cs016c00 cs016c00
+label define cs016d00 0 "0.跳答" 1 "1.15歲以下" 2 "15-19歲" 3 "3.20-24歲" 4 "4.25-29歲" 5 "5.30-34歲" 6 "6.35-39歲" 7 "7.40歲以上" 8 "8.不知道" 9 "9.missing"
+label value cs016d00 cs016d00
+label define cs016e00 0 "0.跳答" 1 "1.台灣" 2 "2.香港" 3 "3.大陸" 4 "4.日本" 5 "5.韓國" 6 "6.美國" 7 "7.其他" 8 "8.不知道" 9 "9.missing"
+label value cs016e00 cs016e00
+label define cs016f00 0 "0.跳答" 1 "1.很希望" 2 "2.還算希望" 3 "3.不太希望" 4 "4.很不希望" 5 "5.不知道、無所謂" 9 "9.missing"
+label value cs016f00 cs016f00
+label define cs017a01 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value cs017a01 cs017a01
+label define cs017a02 0 "00.跳答" 99 "99.missing"
+label value cs017a02 cs017a02
+label define cs017b00 0 "0.跳答" 1 "1.台灣" 2 "2.香港" 3 "3.日本" 4 "4.韓國" 5 "5.美國" 6 "6.其他" 7 "7.不知道" 9 "9.missing"
+label value cs017b00 cs017b00
+label define csclnum 99 "99.missing"
+label value csclnum csclnum

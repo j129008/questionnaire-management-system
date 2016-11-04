@@ -1,0 +1,354 @@
+label define essurvey 1 "1.電話訪問" 2 "2.電訪後郵寄" 3 "3.預試" 9 "9.missing"
+label value essurvey essurvey
+label define eslocation 1 "1.台北市" 2 "2.台北縣" 3 "3.宜蘭縣" 9 "9.missing"
+label value eslocation eslocation
+label define espub 1 "1.國立" 2 "2.私立" 3 "3.省立" 4 "4.市立" 5 "5.縣立" 6 "6.軍警學校" 9 "9.missing"
+label value espub espub
+label define essccl 1 "1.大學" 2 "2.學院" 3 "3.專科" 4 "4.高中" 5 "5.高職" 6 "6.軍警學校" 7 "7.特教學校" 9 "9.missing"
+label value essccl essccl
+label define esschnew 1 "1.高中的高中部" 2 2"2.高中的職業科" 3 "3.高職裡的高中部" 4 "4.高職的職業科" 5 "5.專科" 6 "6.特殊學校" 9 "9.missing"
+label value esschnew esschnew
+label define es001000 1 "1.不是(續答第2題)" 2 "2.是（跳答第3題）" 9 "9.missing"
+label value es001000 es001000
+label define es002000 0 "0.不適用" 1 "01. 上補習班，準備重考（跳答第35題）" 2 "02.在家裡唸書，準備重考（跳答第35題）" 3 "03.在工作了，你做什麼工作（跳答第35題）" 4 "04.結婚了，也有工作（跳答第35題）" 5 "05.結婚了，待在家裡（跳答第35題）" 6 "06.在家裡幫忙（指幫忙看店、做生意）（跳答第35題）" 7 "07.就待在家裡（跳答第35題）" 8 "08.其他（跳答第35題）" 99 "99.missing"
+label value es002000 es002000
+label define es003000 0 "0.不適用" 1 "1.高中：（續答第4題）（含普通高中、完全中學高中部、綜合高中高中部）" 2 "2.高職：（跳答至第5題）" 3 "3.專科：（跳答至第7題）（含技術學校或專科學校）" 9 "9.missing"
+label value es003000 es003000
+label define es004000 0 "0.不適用" 1 "1.第一類組（跳答第9題）" 2 "2.第二類組（跳答第9題）" 3 "3.第三類組（跳答第9題）" 4 "4.第四類組（跳答第9題）" 5"5.職業科別（跳答第7題）" 6 "6.尚未分組（跳答第9題）" 9 "9.missing"
+label value es004000 es004000
+label define es005000 0 "0.不適用" 1 "1.普通科" 2 "2.職業科別" 9 "9.missing"
+label value es005000 es005000
+label define es006000 0 "0.不適用" 1 "1.第一類組（跳答第9題）" 2 "2.第二類組（跳答第9題）" 3 "3.第三類組（跳答第9題）" 4 "4.第四類組（跳答第9題）" 5 "5.尚未分組（跳答第9題）" 8 "8.拒答（跳答第9題）" 9 "9.missing"
+label value es006000 es006000
+label define es008000 0 "0.不適用" 1 "1.是" 2 "2.不是" 9 "9.missing"
+label value es008000 es008000
+label define es009000 0 "0.不適用" 1 "1.日間部（跳答第11題）" 2 "2.夜間部（續答第10題）" 3 "3.進修學校或補校（續答第10題）" 9 "9.missing"
+label value es009000 es009000
+label define es010000 0 "0.不適用" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value es010000 es010000
+label define es011000 0 "0.不適用" 1 "1.一年級（繼續回答第12題）" 2 "2.二年級（跳答至第21題）" 9 "9.missing"
+label value es011000 es011000
+label define es012000 1 "01.申請入學" 2 "02.甄選入學" 3 "03.選第一次學測成績登記分發入學" 4 "04.選第二次學測成績登記分發入學" 5 "05.校內直升" 6 "06.學校獨立招生" 7 "07.其他" 99 "99.missing"
+label value es012000 es012000
+label define es013000 0 "000.不適用/0分" 997 "997.不知道" 998 "998.拒答" 999 "999.遺漏值或跳答"
+label value es013000 es013000
+label define es014000 0 "0.不適用（父母都已經過世）" 1 "1.很滿意" 2 "2.還算滿意" 3 "3.不太滿意" 4 "4.很不滿意" 7 "7.不知道" 9 "9.missing"
+label value es014000 es014000
+label define es015000 0 "0.不適用" 1 "1.很滿意" 2 "2.還算滿意" 3 "3.不太滿意" 4 "4.很不滿意" 7 "7.不知道" 9 "9.missing"
+label value es015000 es015000
+label define es016000 0 "0.不適用" 1 "1.是（續答第17題）" 2 "2.不是(跳至第18題)" 9 "9.missing"
+label value es016000 es016000
+label define es017000 es017000 0 "0.不適用"  1 "1.是" 2 "2.不是" 9 "9.missing"
+label value es017000 es017000
+label define es018000 0 "0.不適用" 1 "1.0人（跳答第21題）" 2 "2.1-4人" 3 "3.5-9人" 4 "4.10-19人" 5 "5.20人以上" 9 "9.missing"
+label value es018000 es018000
+label define es019000 0 "0.不適用" 1 "1.0人" 2 "2.1-4人" 3 "3.5-9人" 4 "4.10-19人" 5 "5.20人以上" 7 "7.不知道" 9 "9.missing"
+label value es019000 es019000
+label define es020000 0 "0.不適用" 1 "1.0人" 2 "2.1-4人" 3 "3.5-9人" 4 "4.10-19人" 5 "5.20人以上" 7 "7.不知道" 9 "9.missing"
+label value es020000 es020000
+label define es021000 0 "00.不適用" 1 "01.國文" 2 "02.英文" 3 "03.數學" 4 "04.物理" 5 "05.化學" 6 "06.地理" 7 "07.歷史" 8 "08.生物" 9 "09.地科" 10 "10.家政" 11 "11.體育" 12 "12.美術" 13 "13.音樂" 14 "14.軍訓" 15 "15.護理" 16 "16.其他" 99 "99.missing"
+label value es021000 es021000
+label define es022000 0 "0.不適用" 7 "7.不知道" 8 "8.拒答" 9 "9.missing"
+label value es022000 es022000
+label define es023000 0 "000.不適用" 997 "997.不知道" 999 "999.missing"
+label value es023000 es023000
+label define es024000 0 "000.不適用" 997 "997.不知道" 999 "999.missing"
+label value es024000 es024000
+label define es025000 0 "0.不適用" 1 "1.進步很多" 2 "2.進步一點" 3 "3.差不多" 4 "4.退步一些" 5 "5.退步很多" 9 "9.missing"
+label value es025000 es025000
+label define es026000 0 "0.不適用" 1 "1.搭公車或捷運" 2 "2.騎腳踏車" 3 "3.騎機車" 4 "4.父母載送" 5 "5.走路" 6 "6.其他" 9 "9.missing"
+label value es026000 es026000
+label define es027000 0 "000.不適用" 997 "997.不知道" 999 "999.missing"
+label value es027000 es027000
+label define es028000 0 "0.不適用" 7 "7.不清楚、不知道" 9 "9.missing"
+label value es028000 es028000 
+label define es029000 0 "00.不適用/0天" 97 "97.不知道" 98 "98.拒答" 99 "99.missing"
+label value es029000 es029000
+label define es030000 0 "00.不適用/0天" 97 "97.不知道" 98 "98.拒答" 99 "99.missing"
+label value es030000 es030000
+label define es031000 0 "0.不適用" 8 "8.拒答" 9 "9.missing"
+label value es031000 es031000
+label define es032000 0 "0.不適用" 8 "8.拒答" 9 "9.missing"
+label value es032000 es032000
+label define es033000 0 "00.不適用/0天" 96 "96.超過2位數" 97 "97.不知道" 98 "98.拒答" 99 "99.missing"
+label value es033000 es033000
+label define es034000 0 "0.不適用" 1 "1.0人" 2 "2.1-2人" 3 "3.3-4人" 4 "4.5-9人" 5 "5.10-19人" 6 "6.20人以上" 7 "7.不知道" 9 "9.missing"
+label value es034000 es034000
+label define es035000 1 "1.經常" 2 "2.偶而" 3 "3.沒有" 9 "9.missing"
+label value es035000 es035000
+label define es036000 1 "1.0人（回答完跳至第43題）" 2 "2.1-2人" 3 "3.3-4人" 4 "4.5-9人" 5 "5.10-19人" 6 "6.20人以上" 7 "7.不知道" 9 "9.missing"
+label value es036000 es036000
+label define es037000 0 "0.不適用" 1 "1.男生" 2 "2.女生" 9 "9.missing"
+label value es037000 es037000
+label define es038000 0 "0.不適用" 1 "1.小學以前" 2 "2.小學時期" 3 "3.國中時期" 4 "4.國中畢業後" 9 "9.missing"
+label value es038000 es038000
+label define es039000 0 "00.不適用" 1 "01.同班" 2 "02.校內社團或活動" 3 "03.就是在校內" 4 "04.校外社團或團體" 5 "05.校際活動" 6 "06.親戚" 7 "07.因家人關係" 8 "08.補習班" 9 "09.網路" 10 "10.筆友" 11 "11.鄰居" 12 "12.打工或工作的地方" 13 "13.其他" 99 "99.missing"
+label value es039000 es039000
+label define es040000 0 "00.不適用" 1 "01.電話" 2 "02.手機" 3 "03.Email" 4 "04.ICQ" 5 "05.上學就會見面" 6 "06.平常就會碰到" 7 "07.其他" 
+label value es040000
+label define es041000 0 "0.不適用" 1 "1.幾乎每天見面" 2 "2.大約一週見面3-4次" 3 "3.大約一週見面1-2次" 4 "4.大約一個月見面1-2次" 5 "5.大約好幾個月才見面1次" 6 "6.很久才見面1次" 9 "9.missing"
+label value es041000 es041000
+label define es042000 0 "0.不適用" 1 "01.外出逛街" 2 "02.看電影" 3 "03.打球、游泳或爬山等戶外活動" 4 "04.打電動" 5 "05.打麻將、打牌" 6 "06.聊天" 7 "07.討論功課" 8 "08.逛書店" 9 "09.上KTV" 10 "10.簽唱會" 11 "11.其他" 99 "99.missing"
+label value es042000 es042000
+label define es043000 1 "1.都健在" 2 "2.爸爸去世了（跳答至第51題）" 3 "3.媽媽去世了（跳答至第51題）" 4 "4.都不在世了（跳答至第52題，再跳答至第68題）" 9 "9.missing"
+label value es043000 es043000
+label define es044000 0 "0.不適用" 1 "1.很滿意" 2 "2.滿意" 3 "3.不太滿意" 4 "4.很不滿意" 9 "9.missing"
+label value es044000 es044000
+label define es045000 0 "0.不適用" 1 "1.有（續答第46題）" 2 "2.沒有（跳答至第51題）" 9 "9.missing"
+label value es045000 es045000
+label define es046000 0 "0.不適用" 1 "1.離婚" 2 "2.分居" 3 "3.外遇" 4 "4.其他" 9 "9.missing"
+label value es046000 es046000
+label define es047000 0 "0.不適用" 1 "1.很難過" 2 "2.有點難過" 3 "3.不太難過" 4 "4.沒有特別的感覺" 9 "9.missing"
+label value es047000 es047000
+label define es048000 0 "0.不適用" 1 "1.會" 2 "2.不會" 3 "3.沒有特別的感覺" 9 "9.missing"
+label value es048000 es048000
+label define es049000 0 "0.不適用" 1 "1.會" 2 "2.不會" 3 "3.沒有特別的感覺" 9 "9.missing"
+label value es049000 es049000
+label define es050000 0 "0.不適用" 1 "1.會" 2 "2.不會" 3 "3.沒有特別的感覺" 8 "8.拒答" 9 "9.missing"
+label value es050000 es050000
+label define es051000 0 "0.不適用" 1 "1.只有跟媽媽住（跳答第53題）" 2 "2.只有跟爸爸住（跳答第53題）" 3 "3.都住在一起（跳答第53題）" 4 "4.不跟爸爸住也不跟媽媽住（續答第52題）"
+label value es051000 es051000
+label define es052000 0 "0.不適用" 1 "1.住在祖父母家" 2 "2.住在外祖父母家" 3 "3.住在其他親戚家" 4 "4.住在同學家" 5 "5.住在朋友家" 6 "6.住校、住宿舍" 7 "7.自己住" 8 "8.其他"
+label value es052000 es052000
+label define es053000 0 "0.不適用" 1 "1.都沒有" 2 "2.爸爸有" 3 "3.媽媽有" 4 "4.爸爸媽媽都有" 8 "8.拒答" 9 "9.missing"
+label value es053000 es053000
+label define es054000 0 "0.不適用（都沒有跟媽媽有任何接觸）" 1 "1.總是知道" 2 "2.通常知道" 3 "3.有時知道有時不知道" 4 "4.不太知道" 5 "5.都不知道" 8 "8.拒答" 9 "9.missing"
+label value es054000 es054000
+label define es055000 0 "0.不適用（都沒有跟爸爸有任何接觸）" 1 "1.總是知道" 2 "2.通常知道" 3 "3.有時知道有時不知道" 4 "4.不太知道" 5 "5.都不知道" 8 "8.拒答" 9 "9.missing" 
+label value es055000 es055000
+label define es056000 0 "0.不適用（都沒有跟媽媽有任何接觸）" 1 "1.總是知道" 2 "2.通常知道" 3 "3.有時知道有時不知道" 4 "4.不太知道" 5 "5.都不知道" 8 "8.拒答" 9 "9.missing" 
+label value es056000 es056000
+label define es057000 0 "0.不適用（都沒有跟爸爸有任何接觸）" 1 "1.總是知道" 2 "2.通常知道" 3 "3.有時知道有時不知道" 4 "4.不太知道" 5 "5.都不知道" 8 "8.拒答" 9 "9.missing" 
+label value es057000 es057000
+label define es058000 0 "0.不適用（都沒有跟媽媽有任何接觸）" 1 "1.總是" 2 "2.常常" 3 "3.有時會有時不會" 4 "4.不太常" 5 "5.幾乎不會" 8 "8.拒答" 9 "9.missing" 
+label value es058000 es058000
+label define es059000 0 "0.不適用（都沒有跟爸爸有任何接觸）" 1 "1.總是" 2 "2.常常" 3 "3.有時會有時不會" 4 "4.不太常" 5 "5.幾乎不會" 8 "8.拒答" 9 "9.missing" 
+label value es059000 es059000
+label define es060000 0 "0.不適用（都沒有跟媽媽有任何接觸）" 1 "1.總是" 2 "2.常常" 3 "3.有時會有時不會" 4 "4.不太常" 5 "5.幾乎不會" 8 "8.拒答" 9 "9.missing" 
+label value es060000 es060000
+label define es061000 0 "0.不適用（都沒有跟爸爸有任何接觸）" 1 "1.總是" 2 "2.常常" 3 "3.有時會有時不會" 4 "4.不太常" 5 "5.幾乎不會" 8 "8.拒答" 9 "9.missing" 
+label value es061000  es061000 
+label define es062000 0 "0.不適用（都沒有跟媽媽有任何接觸）" 1 "1.總是" 2 "2.常常" 3 "3.有時會有時不會" 4 "4.不太常" 5 "5.幾乎不會" 8 "8.拒答" 9 "9.missing" 
+label value es062000 es062000
+label define es063000 0 "0.不適用（都沒有跟爸爸有任何接觸）" 1 "1.總是" 2 "2.常常" 3 "3.有時會有時不會" 4 "4.不太常" 5 "5.幾乎不會" 8 "8.拒答" 9 "9.missing" 
+label value es063000 es063000
+label define es064000 0 "0.不適用（都沒有跟媽媽有任何接觸）" 1 "1.總是了解" 2 "2.通常了解" 3 "3.有時了解有時不了解" 4 "4.不太了解" 5 "5.完全不了解" 8 "8.拒答" 9 "9.missing" 
+label value es064000 es064000
+label define es065000 0 "0.不適用（都沒有跟爸爸有任何接觸）" 1 "1.總是了解" 2 "2.通常了解" 3 "3.有時了解有時不了解" 4 "4.不太了解" 5 "5.完全不了解" 8 "8.拒答" 9 "9.missing" 
+label value es065000 es065000
+label define es066000 0 "0.不適用（都沒有跟媽媽有任何接觸）" 1 "1.會" 2 "2.不會" 9 "9.missing"
+label value es066000 es066000
+label define es067000 0 "0.不適用（都沒有跟爸爸有任何接觸）" 1 "1.會" 2 "2.不會" 9 "9.missing"
+label value es067000 es067000
+label define es068000 0 "0.不適用" 1 "1.很辛苦" 2 "2.辛苦" 3 "3.不太辛苦" 4 "4.一點也不辛苦" 7 "7.不知道" 8 "8.拒答" 9 "9.missing"
+label value es068000 es068000
+label define es069000 0 "0.不適用" 1 "1.很辛苦" 2 "2.辛苦" 3 "3.不太辛苦" 4 "4.一點也不辛苦" 7 "7.不知道" 8 "8.拒答" 9 "9.missing"
+label value es069000 es069000
+label define es070000 0 "0.不適用" 1 "1.很擔心" 2 "2.擔心" 3 "3.不太擔心" 4 "4.一點也不擔心" 7 "7.不知道" 8 "8.拒答" 9 "9.missing"
+label value es070000 es070000
+label define es071000 0 "0.不適用" 1 "1.很擔心" 2 "2.擔心" 3 "3.不太擔心" 4 "4.一點也不擔心" 7 "7.不知道" 8 "8.拒答" 9 "9.missing"
+label value es071000 es071000
+label define es072000 0 "0.不適用" 1 "1.很擔心" 2 "2.擔心" 3 "3.不太擔心" 4 "4.一點也不擔心" 7 "7.不知道" 8 "8.拒答" 9 "9.missing"
+label value es072000 es072000
+label define es073000 0 "0.不適用" 1 "1.很擔心" 2 "2.擔心" 3 "3.不太擔心" 4 "4.一點也不擔心" 7 "7.不知道" 8 "8.拒答" 9 "9.missing"
+label value es073000 es073000
+label define es074000 1 "1.很煩惱" 2 "2.煩惱" 3 "3.不太煩惱" 4 "4.一點也不煩惱" 9 "9.missing"
+label value es074000 es074000
+label define es075000 1 "1.很煩惱" 2 "2.煩惱" 3 "3.不太煩惱" 4 "4.一點也不煩惱" 9 "9.missing"
+label value es075000 es075000
+label define es076000 0 "0.不適用" 1 "1.很擔心" 2 "2.擔心" 3 "3.不太擔心" 4 "4.一點也不擔心" 7 "7.不知道" 8 "8.拒答" 9 "9.missing"
+label value es076000 es076000
+label define es077000 0 "0.不適用" 1 "1.很擔心" 2 "2.擔心" 3 "3.不太擔心" 4 "4.一點也不擔心" 7 "7.不知道" 8 "8.拒答" 9 "9.missing"
+label value es077000 es077000
+label define es078000 0 "0.不適用" 1 "1.很擔心" 2 "2.擔心" 3 "3.不太擔心" 4 "4.一點也不擔心" 7 "7.不知道" 8 "8.拒答" 9 "9.missing"
+label value es078000 es078000
+label define es079000 0 "0.不適用" 1 "1.很擔心" 2 "2.擔心" 3 "3.不太擔心" 4 "4.一點也不擔心" 7 "7.不知道" 8 "8.拒答" 9 "9.missing"
+label value es079000 es079000
+label define es080000 0 "0.不適用" 1 "1.很擔心" 2 "2.擔心" 3 "3.不太擔心" 4 "4.一點也不擔心" 7 "7.不知道" 8 "8.拒答" 9 "9.missing"
+label value es080000 es080000 
+label define es081000 0 "0.不適用" 1 "1.很擔心" 2 "2.擔心" 3 "3.不太擔心" 4 "4.一點也不擔心" 7 "7.不知道" 8 "8.拒答" 9 "9.missing"
+label value es081000 es081000
+label define es082000 0 "00.不適用" 1 "01.同學（續答第82題）" 2 "02.朋友（跳答第83題）" 3 "03.導師（跳答第83題）" 4 "04.輔導室老師（跳答第83題）" 5 "05.爸爸（跳答第83題）" 6 "06.媽媽（跳答第83題）" 7 "07.兄弟姊妹（跳答第83題）" 8 "08.其他親戚（跳答第83題）" 9 "09.鄰居（跳答第83題）" 10 "10.科任老師（跳答第83題）" 11 "11.專業人員（張老師…）（跳答第83題）" 12 "12.同事（跳答第83題）" 13 "13.上司（跳答第83題）" 14 "14.誰都不找（跳答第83題）" 15 "15.補習班老師（跳答第83題）" 16 "16.其他（跳答第83題）" 97 "97.不知道" 98 "98.拒答" 99 "99.missing"
+label value es082000 es082000
+label define es083000 0 "00.不適用" 1 "01.同學（續答第84題）" 2 "02.朋友（跳答第85題）" 3 "03.導師（跳答第85題）" 4 "04.輔導室老師（跳答第85題）" 5 "05.爸爸（跳答第85題）" 6 "06.媽媽（跳答第85題）" 7 "07.兄弟姊妹（跳答第85題）" 8 "08.其他親戚（跳答第85題）" 9 "09.鄰居（跳答第85題）" 10 "10.科任老師（跳答第85題）" 11 "11.專業人員（張老師…）（跳答第85題）" 12 "12.同事（跳答第85題）" 13 "13.上司（跳答第85題）" 14 "14.誰都不找（跳答第85題）" 15 "15.補習班老師（跳答第85題）" 16 "16.其他（跳答第85題）" 97 "97.不知道" 98 "98.拒答" 99 "99.missing"
+label value es083000 es083000 
+label define es084000 0 "0.不適用" 1 "1.現在同班同學" 2 "2.現在同校不同班同學" 3 "3.補習班同學" 4 "4.國中同學" 5 "5.國小同學" 6 "6.其他" 
+label value es084000 es084000 
+label define es085000 0 "00.不適用" 1 "01.同學（續答第86題）" 2 "02.朋友（跳答第87題）" 3 "03.導師（跳答第87題）" 4 "04.輔導室老師（跳答第87題）" 5 "05.爸爸（跳答第87題）" 6 "06.媽媽（跳答第87題）" 7 "07.兄弟姊妹（跳答第87題）" 8 "08.其他親戚（跳答第87題）" 9 "09.鄰居（跳答第87題）" 10 "10.科任老師（跳答第87題）" 11 "11.專業人員（張老師…）（跳答第87題）" 12 "12.同事（跳答第87題）" 13 "13.上司（跳答第87題）" 14 "14.誰都不找（跳答第87題）" 15 "15.補習班老師（跳答第87題）" 16 "16.其他（跳答第87題）" 97 "97.不知道" 98 "98.拒答" 99 "99.missing"
+label value es085000 es085000
+label define es086000 0 "0.不適用" 1 "1.現在同班同學" 2 "2.現在同校不同班同學" 3 "3.補習班同學" 4 "4.國中同學" 5 "5.國小同學" 6 "6.其他" 9 "9.missing"
+label value es086000 es086000 
+label define es087000 1 "1.變好很多" 2 "2.變好一些" 3 "3.差不多" 4 "4.變差一些" 5 "5.變差很多" 7 "7.不知道" 9 "9.missing"
+label value es087000 es087000 
+label define es088000 0 "0.不適用" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value es088000 es088000
+label define es089000 0 "0.不適用" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value es089000 es089000
+label define es090000 0 "0.不適用" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value es090000 es090000
+label define es091000 0 "0.不適用" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value es091000 es091000
+label define es092000 0 "0.不適用" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value es092000 es092000
+label define es093000 0 "0.不適用" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value es093000 es093000
+label define es094000 0 "0.不適用" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value es094000 es094000
+label define es095000 0 "0.不適用" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value es095000 es095000 
+label define es096000 0 "0.沒有兄姐" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value es096000 es096000
+label define es097000 0 "0.不適用" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value es097000 es097000
+label define es098000 0 "0.不適用" 1 "1.有" 2 "2.沒有" 7 "7.不知道" 8 "8.拒答" 9 "9.missing"
+label value es098000 es098000 
+label define es099000 0 "0.不適用" 1 "1.有" 2 "2.沒有" 7 "7.不知道" 8 "8.拒答" 9 "9.missing"
+label value es099000 es099000
+label define es100000 0 "0.不適用" 1 "1.有" 2 "2.沒有" 7 "7.不知道" 8 "8.拒答" 9 "9.missing"
+label value es100000 es100000
+label define es101000 0 "0.不適用" 1 "1.有（跳答第103題）" 2 "2.沒有" 7 "7.不知道" 8 "8.拒答" 9 "9.missing"
+label value es101000 es101000
+label define es102000 0 "0.不適用" 1 "1.失業" 2 "2.退休" 3 "3.其他" 7 "7.不知道" 8 "8.拒答" 9 "9.missing" 
+label value es102000 es102000
+label define es103000 0 "0.不適用" 1 "1.有（跳答第105題）" 2 "2.沒有" 7 "7.不知道" 8 "8.拒答" 9 "9.missing"
+label value es103000 es103000
+label define es104000 0 "0.不適用" 1 "1.失業" 2 "2.退休" 3 "3.家庭主婦" 4 "4.其他" 7 "7.不知道" 8 "8.拒答" 9 "9.missing"
+label value es104000 es104000
+label define es105000 0 "0.不適用" 1 "1.有（跳答第107題）" 2 "2.沒有" 7 "7.不知道" 8 "8.拒答" 9 "9.missing"
+label value es105000 es105000
+label define es106000 0 "0.不適用" 1 "1.是（跳答第109題）" 2 "2.不是" 7 "7.不知道（跳答第109題）" 8 "8.拒答" 9 "9.missing"
+label value es106000 es106000
+label define es107001 0 "0.不適用" 1 "1.有勾選" 2 "2.沒有勾選" 7 "7.不知道" 8 "8.拒答" 9 "9.missing" 
+label value es107001 es107001
+label define es107002 0 "0.不適用" 1 "1.有勾選" 2 "2.沒有勾選" 7 "7.不知道" 8 "8.拒答" 9 "9.missing" 
+label value es107002 es107002
+label define es107003 0 "0.不適用" 1 "1.有勾選" 2 "2.沒有勾選" 7 "7.不知道" 8 "8.拒答" 9 "9.missing" 
+label value es107003 es107003
+label define es107004 0 "0.不適用" 1 "1.有勾選" 2 "2.沒有勾選" 7 "7.不知道" 8 "8.拒答" 9 "9.missing" 
+label value es107004 es107004
+label define es107005 0 "0.不適用" 1 "1.有勾選" 2 "2.沒有勾選" 7 "7.不知道" 8 "8.拒答" 9 "9.missing" 
+label value es107005 es107005
+label define es107006 0 "0.不適用" 1 "1.有勾選" 2 "2.沒有勾選" 7 "7.不知道" 8 "8.拒答" 9 "9.missing" 
+label value es107006 es107006
+label define es107007 0 "0.不適用" 1 "1.有勾選" 2 "2.沒有勾選" 7 "7.不知道" 8 "8.拒答" 9 "9.missing" 
+label value es107007 es107007
+label define es107008 0 "0.不適用" 1 "1.有勾選" 2 "2.沒有勾選" 7 "7.不知道" 8 "8.拒答" 9 "9.missing" 
+label value es107008 es107008
+label define es107009 0 "0.不適用" 1 "1.有勾選" 2 "2.沒有勾選" 7 "7.不知道" 8 "8.拒答" 9 "9.missing" 
+label value es107009 es107009
+label define es107010 0 "0.不適用" 1 "1.有勾選" 2 "2.沒有勾選" 7 "7.不知道" 8 "8.拒答" 9 "9.missing" 
+label value es107010 es107010
+label define es108000 0 "00000.不適用/0元" 99997 "99997.不知道" 99998 "99998.拒答" 99999 "99999.遺漏值或跳答"
+label value es108000 es108000 
+label define es109001 91 "91.工作或睡眠時間不固定" 97 "97.不知道" 98 "98.拒答" 99 "99.遺漏值或跳答"
+label value es109001 es109001
+label define es109002 97 "97.不知道" 98 "98.拒答" 99 "99.遺漏值或跳答"
+label value es109002 es109002
+label define es110001 97 "97.不知道" 98 "98.拒答" 99 "99.遺漏值或跳答"
+label value es110001 es110001
+label define es111002 97 "97.不知道" 98 "98.拒答" 99 "99.遺漏值或跳答"
+label value es111002 es111002
+label define es112001 97 "97.不知道" 98 "98.拒答" 99 "99.遺漏值或跳答"
+label value es112001 es112001
+label define es112002 97 "97.不知道" 98 "98.拒答" 99 "99.遺漏值或跳答"
+label value es112002 es112002
+label define es113000 1 "1.總是" 2 "2.經常" 3 "3.有時候" 4 "4.很少" 5 "5.幾乎沒有" 9 "9.missing" 
+label value es113000 es113000 
+label define es114000 1 "1.總是" 2 "2.常常" 3 "3.很少" 4 "4.從不" 9 "9.missing" 
+label value es114000 es114000
+label define es115000 0 "0.不適用" 1 "1.有勾選" 2 "2.沒有勾選" 9 "9.missing" 
+label value es115000 es115000
+label define es115001 0 "0.不適用" 1 "1.有勾選" 2 "2.沒有勾選" 9 "9.missing" 
+label value es115001 es115001
+label define es115002 0 "0.不適用" 1 "1.有勾選" 2 "2.沒有勾選" 9 "9.missing" 
+label value es115002 es115002
+label define es115003 0 "0.不適用" 1 "1.有勾選" 2 "2.沒有勾選" 9 "9.missing" 
+label value es115003 es115003
+label define es115004 0 "0.不適用" 1 "1.有勾選" 2 "2.沒有勾選" 9 "9.missing" 
+label value es115004 es115004
+label define es115008 0 "0.不適用" 1 "1.有勾選" 2 "2.沒有勾選" 9 "9.missing" 
+label value es115008 es115008
+label define es116000 0 "00000.不適用/0元" 99996 "99996.超過5位數" 99997 "99997.不知道" 99998 "99998.拒答" 99999 "99999.遺漏值或跳答"
+label value es116000 es116000
+label define es117000 0 "00.不適用" 1 "01.付學費" 2 "02.補習費" 3 "03.自己的生活費" 4 "04.個人零用（上網咖、休閒娛樂、買自己想要的東西） 5 "05.幫忙家庭開銷" 6 "06.存起來" 7 "07.其他" 99 "99.missing"
+label value es117000 es117000
+label define es118000 0 "00000.不適用/0元" 99996 "99996.超過5位數" 99997 "99997.不知道" 99998 "99998.拒答" 99999 "99999.遺漏值或跳答"
+label value es118000 es118000
+label define es119000 0 "0.不適用" 1 "1.沒有" 2 "2.有，有點" 3 "3.有，普通" 4 "4.有，嚴重" 5 "5.有，很嚴重" 9 "9.missing" 
+label value es119000 es119000
+label define es120000 0 "0.不適用" 1 "1.沒有" 2 "2.有，有點" 3 "3.有，普通" 4 "4.有，嚴重" 5 "5.有，很嚴重" 9 "9.missing" 
+label value es120000 es120000
+label define es121000 0 "0.不適用" 1 "1.沒有" 2 "2.有，有點" 3 "3.有，普通" 4 "4.有，嚴重" 5 "5.有，很嚴重" 9 "9.missing" 
+label value es121000 es121000
+label define es122000 0 "0.不適用" 1 "1.沒有" 2 "2.有，有點" 3 "3.有，普通" 4 "4.有，嚴重" 5 "5.有，很嚴重" 9 "9.missing" 
+label value es122000 es122000
+label define es123000 0 "0.不適用" 1 "1.沒有" 2 "2.有，有點" 3 "3.有，普通" 4 "4.有，嚴重" 5 "5.有，很嚴重" 9 "9.missing" 
+label value es123000 es123000
+label define es124000 0 "0.不適用" 1 "1.沒有" 2 "2.有，有點" 3 "3.有，普通" 4 "4.有，嚴重" 5 "5.有，很嚴重" 9 "9.missing" 
+label value es124000 es124000
+label define es125000 0 "0.不適用" 1 "1.沒有" 2 "2.有，有點" 3 "3.有，普通" 4 "4.有，嚴重" 5 "5.有，很嚴重" 9 "9.missing" 
+label value es125000 es125000
+label define es126000 1 "1.有（跳答第128題）" 2 "2.沒有（續答第127題）" 9 "9.missing" 
+label value es126000 es126000
+label define es127000 0 "0.不適用" 1 "1.想（跳答第129題）" 2 "2.不想（跳答第129題）" 8 "8.拒答" 9 "9.missing" 
+label value es127000 es127000
+label define es128000 0 "0.不適用" 1 "1.國中" 2 "2.國中畢業後的暑假" 3 "3.高一上學期" 4 "4.高一下學期" 5 "5.升高二暑假" 6 "6.高二上學期"  9 "9.missing"
+label value es128000 es128000
+label define es129000 1 "1.有（繼續回答）" 2 "2.沒有（跳答第132題）" 8 "8.拒答" 9 "9.missing"
+label value es129000 es129000
+label define es130001 0 "0.不適用" 1 "1.有勾選" 2 "2.沒有勾選" 9 "9.missing"
+label value es130001 es130001
+label define es130002 0 "0.不適用" 1 "1.有勾選" 2 "2.沒有勾選" 9 "9.missing"
+label value es130002 es130002
+label define es130003 0 "0.不適用" 1 "1.有勾選" 2 "2.沒有勾選" 9 "9.missing"
+label value es130003 es130003
+label define es130004 0 "0.不適用" 1 "1.有勾選" 2 "2.沒有勾選" 9 "9.missing"
+label value es130004 es130004
+label define es130005 0 "0.不適用" 1 "1.有勾選" 2 "2.沒有勾選" 9 "9.missing"
+label value es130005 es130005
+label define es130006 0 "0.不適用" 1 "1.有勾選" 2 "2.沒有勾選" 9 "9.missing"
+label value es130006 es130006
+label define es130007 0 "0.不適用" 1 "1.有勾選" 2 "2.沒有勾選" 9 "9.missing"
+label value es130007 es130007
+label define es130008 0 "0.不適用" 1 "1.有勾選" 2 "2.沒有勾選" 9 "9.missing"
+label value es130008 es130008
+label define es130009 0 "0.不適用" 1 "1.有勾選" 2 "2.沒有勾選" 9 "9.missing"
+label value es130009 es130009
+label define es130010 0 "0.不適用" 1 "1.有勾選" 2 "2.沒有勾選" 9 "9.missing"
+label value es130010 es130010
+label define es130011 0 "0.不適用" 1 "1.有勾選" 2 "2.沒有勾選" 9 "9.missing"
+label value es130011 es130011
+label define es130012 0 "0.不適用" 1 "1.有勾選" 2 "2.沒有勾選" 9 "9.missing"
+label value es130012 es130012
+label define es131000 0 "0.不適用" 1 "1.藥房" 2 "2.家裡" 3 "3.特定販賣場所" 4 "4.來自同學朋友" 5 "5.其他" 8 "8.拒答" 9 "9.missing"
+label value es131000 es131000
+label define es132000 0 "0.不適用" 1 "1.有" 2 "2.沒有" 7 "7.不知道" 9 "9.missing"
+label value es132000 es132000
+label define es133000 0 "0.不適用" 1 "1.有" 2 "2.沒有" 7 "7.不知道" 9 "9.missing"
+label value es133000 es133000
+label define es134000 1 "1.幾乎每天" 2 "2.每週二到三次" 3 "3.大概每週一次" 4 "4.很少" 5 "5.從未上過網（跳至第136題）" 9 "9.missing"
+label value es134000 es134000
+label define es135000 1 "1.幾乎每天去" 2 "2.每週二到三次" 3 "3.大概每週一次" 4 "4.每個月１－２次" 5 "5.很少" 6 "6.從未去過" 9 "9.missing"
+label value es135000 es135000
+label define es136000 0 "0.不適用" 1 "1.有" 2 "2.沒有" 9 "9.missing"
+label value es136000 es136000
+label define es137000 0 "0.從來沒有過手機（請跳答至第143題）" 1 "1.1支" 2 "2.2支" 3 "3.3支" 4 "4.4支" 5 "5.5支以上" 9 "9.missing"
+label value es137000 es137000 
+label define es138000 0 "0.不適用" 1 "1.國小畢業前" 2 "2.國中畢業前" 3 "3.國中畢業以後" 9 "9.missing"
+label value es138000 es138000
+label define es139000 0 "000.不適用/0分鐘" 996 "996.超過3位數" 997 "997.不知道" 998 "998.拒答" 999 "999.遺漏值或跳答"
+label value es139000 es139000
+label define es140000 0 "0.不適用/0元" 99996 "99996.超過5位數" 99997 "99997.不知道" 99998 "99998.拒答" 99999 "99999.遺漏值或跳答"
+label value es140000 es140000
+label define es141000 0 "0.不適用" 1 "1.父母" 2 "2.自己" 3 "3.男女朋友" 4 "4.兄姐" 5 "5.其他" 9 "9.missing"
+label value es141000 es141000
+label define es142000 0 "0.不適用" 1 "1.從來不會ｃａｌｌ" 2 "2.有事才ｃａｌｌ" 3 "3.一天大約１次" 4 "4.1天數次" 9 "9.missing"
+label value es142000 es142000
+label define es143000 0 "0.不適用" 1 "1.很快樂" 2 "2.還算快樂" 3 "3.不太快樂" 4 "4.很不快樂" 7 "7.不知道" 8 "8.拒答" 9 "9.missing" 
+label value es143000 es143000
+label define es144000 0 "0.不適用" 1 "1.很健康" 2 "2.還算健康" 3 "3.不太健康" 4 "4.很不健康" 7 "7.不知道" 8 "8.拒答" 9 "9.missing" 
+label value es144000 es144000
+label define es145000 1 "1.沒有變動" 2 "2.有變動，並願意給目前的地址" 3 "3.有變動，但不願給目前的地址" 7 "7.不知道" 8 "8.拒答" 9 "9.missing" 
+label value es145000 es145000
+label define es146000 1 "1.沒有" 2 "2.有，可否留給我們以便往後跟你聯絡之用" 7 "7.不知道" 8 "8.拒答" 9 "9.missing" 
+label value es146000 es146000

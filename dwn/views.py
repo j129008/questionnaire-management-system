@@ -1,8 +1,10 @@
 from django.shortcuts import render_to_response
 from sub.models import subject
+from dwn.models import program
 from django.http import HttpResponse
 import os
 import csv
+from glob import glob
 
 def dwn(request):
     try:
@@ -30,6 +32,19 @@ def dwn(request):
                         line.append('')
                 writer.writerow(line)
             f.close()
+            return response
+        if 'downloadProg' in request.GET:
+            response = HttpResponse(content_type='text/txt')
+            response['Content-Disposition'] = 'attachment; filename="program.txt"'
+            outList = [ ele[3].split("_")[1] for ele in request.session['saved'] ]
+            for keyword in outList:
+                try:
+                    response.write(keyword+':\n')
+                    for s in program.objects.filter(question__contains=keyword):
+                        response.write(s)
+                    response.write('\n')
+                except Exception as e:
+                    print( str(e) )
             return response
         if 'saved' not in request.session:
             request.session['saved'] = []
