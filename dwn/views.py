@@ -39,10 +39,10 @@ def dwn(request):
             outList = [ ele[3].split("_")[1] for ele in request.session['saved'] ]
             for keyword in outList:
                 try:
-                    response.write(keyword+':\n')
+                    response.write(keyword+':\r\n')
                     for s in program.objects.filter(question__contains=keyword):
-                        response.write(s)
-                    response.write('\n')
+                        response.write(str(s)+'\r\n')
+                    response.write('\r\n')
                 except Exception as e:
                     print( str(e) )
             return response
