@@ -7,3 +7,4 @@ csv/
 .gitignore
 *.xlsx
 *.xls
+*.txt
