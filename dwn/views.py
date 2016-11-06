@@ -63,9 +63,13 @@ def dwn(request):
         except:
             tags[pk] = []
             tags[pk].append(tag)
-        ques = subject.objects.get(pk=pk).question
-        ques_top = subject.objects.get(pk=pk).question_top
-        tagList = subject.objects.get(pk=pk).wave
+        try:
+            ques = subject.objects.get(pk=pk).question
+            ques_top = subject.objects.get(pk=pk).question_top
+            tagList = subject.objects.get(pk=pk).wave
+        except:
+            request.session['saved'] = []
+            return render_to_response('download.html')
         waveList = ''
         i = 0
         for w in tagList.split(','):
