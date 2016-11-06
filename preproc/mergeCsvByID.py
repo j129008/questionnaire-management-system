@@ -32,7 +32,7 @@ keyList.remove('id2')
 keyList = ['id2'] + keyList
 out = [keyList]
 
-for id2 in data: 
+for id2 in data:
     line = [id2]
     for ele in keyList[1:]:
         try:
