@@ -21,7 +21,7 @@ def dwn(request):
             writer = csv.writer(response)
             response.write('\ufeff')
             f = open('dwn/merge.csv', 'r')
-            outList = [ ele[3].split("-")[1] for ele in request.session['saved'] ]
+            outList = [ ele[3].split("-")[1].lower() for ele in request.session['saved'] ]
             outList = ['id2'] + outList
             writer.writerow(outList)
             for row in csv.DictReader(f):
