@@ -16,7 +16,6 @@ for fname in sys.argv[1:]:
         for i in range(len(line)):
             line[i] = re.sub(r'',' ',line[i])
             line[i] = re.sub('\s+',' ',line[i])
-            line[i] = re.sub('^[\d.]+','',line[i])
         if len(line[0]) > 1:
             col1 = line[0]
         if len(line[1]) > 1:
@@ -24,7 +23,7 @@ for fname in sys.argv[1:]:
         if len(line[2]) > 1:
             col3 = line[2]
         if len(line[3]) > 1:
-            col4 = line[3]
+            col4 = re.sub('^[a-z()\d.-]+','', line[3])
 
         if len(col4)>1 and len(col3)>1:
             if col1 not in db:
