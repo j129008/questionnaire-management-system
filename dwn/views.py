@@ -56,8 +56,12 @@ def dwn(request):
     data = {}
     out = []
     for rec in request.session['saved']:
-        pk = rec[3].split('-')[0]
-        tag = rec[3].split('-')[1]
+        try:
+            pk = rec[3].split('-')[0]
+            tag = rec[3].split('-')[1]
+        except:
+            request.session['saved'] = []
+            return render_to_response('download.html')
         try:
             tags[pk].append(tag)
         except:
