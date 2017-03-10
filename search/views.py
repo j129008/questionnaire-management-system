@@ -31,8 +31,8 @@ def search(request):
         pass
     pool = []
     for top in setPool:
-        pool += [ { 'lv2': str(ele.level2), 'lv3': str(ele.level3), 'question': str(ele.question).replace(keyword, '<strong>'+keyword+'</strong>'), 'question_top': str(ele.question_top).replace(keyword, '<strong>'+keyword+'</strong>'), 'wave': ele.wave.split(','), 'pk': ele.pk } for ele in subject.objects.filter(question_top=top) ]
-    pool += [ { 'lv2': str(ele.level2), 'lv3': str(ele.level3), 'question': str(ele.question).replace(keyword, '<strong>'+keyword+'</strong>'), 'question_top': str(ele.question_top).replace(keyword, '<strong>'+keyword+'</strong>'), 'wave': ele.wave.split(','), 'pk': ele.pk } for ele in subject.objects.filter(question_top='', question__contains=keyword) ]
+        pool += [ { 'lv1': str(ele.level1), 'lv2': str(ele.level2), 'lv3': str(ele.level3), 'question': str(ele.question).replace(keyword, '<strong>'+keyword+'</strong>'), 'question_top': str(ele.question_top).replace(keyword, '<strong>'+keyword+'</strong>'), 'wave': ele.wave.split(','), 'pk': ele.pk } for ele in subject.objects.filter(question_top=top) ]
+    pool += [ { 'lv1': str(ele.level1), 'lv2': str(ele.level2), 'lv3': str(ele.level3), 'question': str(ele.question).replace(keyword, '<strong>'+keyword+'</strong>'), 'question_top': str(ele.question_top).replace(keyword, '<strong>'+keyword+'</strong>'), 'wave': ele.wave.split(','), 'pk': ele.pk } for ele in subject.objects.filter(question_top='', question__contains=keyword) ]
     for ele in pool:
         if ele['question'] == ele['question_top']:
             pool[pool.index(ele)]['sort'] = ele['question_top']

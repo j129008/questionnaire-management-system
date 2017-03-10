@@ -67,6 +67,7 @@
             <table class="table">
                <thead>
                   <tr>
+                     <th>對象</th>
                      <th>分析層次</th>
                      <th>面向</th>
                      {% for wave in waveCnt%}
@@ -82,14 +83,17 @@
                         <tr class="active">
                         {% if line.question_top == line.question %}
                            <tr class="info">
+                           <td>{{line.lv1}}</td>
                            <td>{{line.lv2}}</td>
                            <td>{{line.lv3}}</td>
                         {%else%}
                            <td></td>
                            <td></td>
+                           <td></td>
                         {% endif %}
                      {%else%}
                         <tr>
+                        <td>{{line.lv1}}</td>
                         <td>{{line.lv2}}</td>
                         <td>{{line.lv3}}</td>
                      {% endif %}
