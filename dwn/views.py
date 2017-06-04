@@ -1,6 +1,7 @@
 from django.shortcuts import render_to_response
 from sub.models import subject
 from dwn.models import program
+from dwn.models import spss
 from django.http import HttpResponse
 import os
 import csv
@@ -42,6 +43,19 @@ def dwn(request):
                 try:
                     response.write(keyword+':\r\n')
                     for s in program.objects.filter(question__contains=keyword):
+                        response.write(str(s)+'\r\n')
+                    response.write('\r\n')
+                except Exception as e:
+                    print( str(e) )
+            return response
+        if 'downloadProg_SPSS' in request.GET:
+            response = HttpResponse(content_type='text/txt')
+            response['Content-Disposition'] = 'attachment; filename="program_SPSS.txt"'
+            outList = [ ele[3].split("-")[1] for ele in request.session['saved'] ]
+            for keyword in outList:
+                try:
+                    response.write(keyword+':\r\n')
+                    for s in spss.objects.filter(question__contains=keyword):
                         response.write(str(s)+'\r\n')
                     response.write('\r\n')
                 except Exception as e:
