@@ -6,6 +6,7 @@ from django.http import HttpResponse
 import os
 import csv
 from glob import glob
+from pprint import pformat
 
 def dwn(request):
     try:
@@ -48,6 +49,11 @@ def dwn(request):
                 except Exception as e:
                     print( str(e) )
             return response
+        if 'downloadList' in request.GET:
+            response = HttpResponse(content_type='text/txt')
+            response['Content-Disposition'] = 'attachment; filename="list.txt"'
+            response.write(pformat(out).replace('\n','\r\n'))
+            return response
         if 'downloadProg_SPSS' in request.GET:
             response = HttpResponse(content_type='text/txt')
             response['Content-Disposition'] = 'attachment; filename="program_SPSS.txt"'
@@ -68,6 +74,7 @@ def dwn(request):
         print(str(e))
     tags = {}
     data = {}
+    global out
     out = []
     for rec in request.session['saved']:
         try:
